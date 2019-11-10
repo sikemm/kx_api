@@ -1,0 +1,45 @@
+test_case_1 (kx_api.test_cases.test_case.TestCases)
+dict() -> new empty dictionary ... ERROR
+test_case_2 (kx_api.test_cases.test_case.TestCases)
+dict() -> new empty dictionary ... ERROR
+
+======================================================================
+ERROR: test_case_1 (kx_api.test_cases.test_case.TestCases)
+dict() -> new empty dictionary
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "G:\pythonproject_01\kx_api\test_cases\test_case.py", line 39, in test_case
+    self.assertEqual(eval(case['ExpectedResult']),resp.json())
+AttributeError: 'str' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "G:\pythonproject_01\kx_api\test_cases\test_case.py", line 48, in test_case
+    self.f.write_data(case['CaseId']+1,8,resp.text)
+AttributeError: 'str' object has no attribute 'text'
+
+======================================================================
+ERROR: test_case_2 (kx_api.test_cases.test_case.TestCases)
+dict() -> new empty dictionary
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "G:\pythonproject_01\kx_api\test_cases\test_case.py", line 39, in test_case
+    self.assertEqual(eval(case['ExpectedResult']),resp.json())
+AttributeError: 'str' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "G:\pythonproject_01\kx_api\test_cases\test_case.py", line 48, in test_case
+    self.f.write_data(case['CaseId']+1,8,resp.text)
+AttributeError: 'str' object has no attribute 'text'
+
+----------------------------------------------------------------------
+Ran 2 tests in 42.067s
+
+FAILED (errors=2)
