@@ -1,0 +1,238 @@
+[2019-11-05 15:51:16,601]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 15:51:16,603]-[INFO]-[日志信息]:URL：http://192.168.1.86:3000/mock/11/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 15:51:16,657]-[INFO]-[日志信息]:ActualResult：{}
+[2019-11-05 15:52:14,555]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 15:52:14,557]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 15:52:15,044]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 15:55:05,142]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 15:55:05,180]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 15:55:05,204]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 16:23:12,879]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 16:23:12,885]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 16:23:12,902]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 16:29:39,263]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 16:29:39,270]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 16:30:33,620]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 16:30:33,630]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 16:45:42,847]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 16:45:42,853]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 16:45:42,872]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 16:48:20,601]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 16:48:20,607]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 16:48:20,652]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 16:53:55,710]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 16:53:55,717]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 16:53:55,736]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 17:00:03,966]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:00:03,973]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 17:00:03,993]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 17:01:20,147]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:01:20,154]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 17:01:20,174]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 17:03:19,656]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:03:19,664]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 17:03:19,682]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 17:04:01,224]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:04:01,231]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 17:04:01,250]-[INFO]-[日志信息]:ActualResult：
+[2019-11-05 17:23:37,103]-[INFO]-[日志信息]:---=正在执行Auth模块第15条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:23:37,109]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 17:23:37,148]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641205974819930112,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T17:23:37.4300095+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 17:41:49,221]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:41:49,223]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 17:41:49,259]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641210555759067136,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T17:41:49.6113743+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 17:50:10,839]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:50:10,842]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 17:50:10,876]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"Method arguments are not valid! See ValidationErrors for details.","Details":"AbpValidationException: Method arguments are not valid! See ValidationErrors for details.\r\nThe following errors were detected during validation.\r\n - Unexpected character encountered while parsing value: T. Path '', line 0, position 0.\r\n\r\nSTACK TRACE:    at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()\r\n   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()\r\n   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":[{"Message":"Unexpected character encountered while parsing value: T. Path '', line 0, position 0.","Members":[""]}]},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 17:52:24,728]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:52:24,735]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-05 17:52:24,763]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"Method arguments are not valid! See ValidationErrors for details.","Details":"AbpValidationException: Method arguments are not valid! See ValidationErrors for details.\r\nThe following errors were detected during validation.\r\n - Unexpected character encountered while parsing value: T. Path '', line 0, position 0.\r\n\r\nSTACK TRACE:    at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()\r\n   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()\r\n   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":[{"Message":"Unexpected character encountered while parsing value: T. Path '', line 0, position 0.","Members":[""]}]},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 17:53:00,002]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:53:00,011]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 17:53:00,097]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641213369436602368,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T17:53:00.4443027+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 17:55:24,624]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:55:24,630]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 17:55:24,664]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"该POS已被绑定，请先解绑！","Details":"UserFriendlyException: 该POS已被绑定，请先解绑！\r\nSTACK TRACE:    at GraspSaas.Grasp.Auth.AuthAppService.Bind(BindInput input) in E:\\Worked\\@GraspShop\\GraspPosShop.Api\\src\\GraspSaas.PosApi.Application\\Grasp\\Auth\\AuthAppService.cs:line 115\r\n   at lambda_method(Closure , Object )\r\n   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 17:56:04,827]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:56:04,833]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 17:56:04,874]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"该POS已被绑定，请先解绑！","Details":"UserFriendlyException: 该POS已被绑定，请先解绑！\r\nSTACK TRACE:    at GraspSaas.Grasp.Auth.AuthAppService.Bind(BindInput input) in E:\\Worked\\@GraspShop\\GraspPosShop.Api\\src\\GraspSaas.PosApi.Application\\Grasp\\Auth\\AuthAppService.cs:line 115\r\n   at lambda_method(Closure , Object )\r\n   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 17:56:37,226]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 17:56:37,233]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 17:56:37,263]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"该POS已被绑定，请先解绑！","Details":"UserFriendlyException: 该POS已被绑定，请先解绑！\r\nSTACK TRACE:    at GraspSaas.Grasp.Auth.AuthAppService.Bind(BindInput input) in E:\\Worked\\@GraspShop\\GraspPosShop.Api\\src\\GraspSaas.PosApi.Application\\Grasp\\Auth\\AuthAppService.cs:line 115\r\n   at lambda_method(Closure , Object )\r\n   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:01:13,691]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:01:13,698]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:01:13,733]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641215440227401728,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T18:01:14.1590383+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:03:03,070]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:03:03,077]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:03:03,112]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641215899025539072,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T18:03:03.545299+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:03:55,225]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:03:55,232]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:03:55,267]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"该POS已被绑定，请先解绑！","Details":"UserFriendlyException: 该POS已被绑定，请先解绑！\r\nSTACK TRACE:    at GraspSaas.Grasp.Auth.AuthAppService.Bind(BindInput input) in E:\\Worked\\@GraspShop\\GraspPosShop.Api\\src\\GraspSaas.PosApi.Application\\Grasp\\Auth\\AuthAppService.cs:line 115\r\n   at lambda_method(Closure , Object )\r\n   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:04:37,945]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:04:37,951]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:04:37,985]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641216296972713984,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T18:04:38.4234124+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:04:38,217]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第2条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-05 18:04:38,219]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{"TenantId":"1","ClientPosBind":"641216296972713984","StoreId":"640825655000301568","PosId":"640846608296050688","MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR"}
+[2019-11-05 18:04:39,686]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"Method arguments are not valid! See ValidationErrors for details.","Details":"AbpValidationException: Method arguments are not valid! See ValidationErrors for details.\r\nThe following errors were detected during validation.\r\n - The MachineMac field is required.\r\n - The MachineName field is required.\r\n\r\nSTACK TRACE:    at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()\r\n   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()\r\n   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":[{"Message":"The MachineMac field is required.","Members":["machineMac"]},{"Message":"The MachineName field is required.","Members":["machineName"]}]},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:04:39,690]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第9条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-05 18:04:39,693]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{"TenantId":"1","ClientPosBind":"641216296972713984","StoreId":"640825655000301568","PosId":"640846608296050688","MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR"}
+[2019-11-05 18:04:39,766]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"Method arguments are not valid! See ValidationErrors for details.","Details":"AbpValidationException: Method arguments are not valid! See ValidationErrors for details.\r\nThe following errors were detected during validation.\r\n - The MachineMac field is required.\r\n - The MachineName field is required.\r\n\r\nSTACK TRACE:    at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()\r\n   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()\r\n   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":[{"Message":"The MachineMac field is required.","Members":["machineMac"]},{"Message":"The MachineName field is required.","Members":["machineName"]}]},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:07:45,995]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:07:46,001]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:07:46,035]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641217085766107136,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T18:07:46.4861225+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:07:46,269]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第2条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-05 18:07:46,272]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBind': '641217085766107136', 'StoreId': '640825655000301568', 'PosId': '640846608296050688', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-05 18:07:46,340]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":640806478231371776,"Sort":640806478231371776,"PId":640806439056572416,"Code":"0210","Name":"10010","PyCode":"10010"},{"Id":640806513107009536,"Sort":640806513107009536,"PId":640806478231371776,"Code":"0101","Name":"0101","PyCode":"01010"},{"Id":640818672624992256,"Sort":640818672624992256,"PId":640818473672376320,"Code":"00201","Name":"薯片","PyCode":"sp"},{"Id":640818774064234496,"Sort":640818774064234496,"PId":640818473672376320,"Code":"00202","Name":"称重商品","PyCode":"czsp"},{"Id":640826046882512896,"Sort":640826046882512896,"PId":0,"Code":"01","Name":"零食","PyCode":"ls"},{"Id":640826354882838528,"Sort":640826354882838528,"PId":640826046882512896,"Code":"02","Name":"休闲零食","PyCode":"xxls"},{"Id":640826448612950016,"Sort":640826448612950016,"PId":640826046882512896,"Code":"03","Name":"速冻食品","PyCode":"sdsp"},{"Id":640828048018505728,"Sort":640828048018505728,"PId":0,"Code":"04","Name":"酒水饮料","PyCode":"jsyl"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:07:46,344]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第9条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-05 18:07:46,347]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBind': '641217085766107136', 'StoreId': '640825655000301568', 'PosId': '640846608296050688', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-05 18:07:46,453]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":640828650089873408,"Sort":640828650089873408,"ProductCategoryId":640826046882512896,"Code":"001","Name":"葡萄酒","PyCode":"ptj","Spec":"瓶","PricingMode":2}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:12:32,060]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:12:32,066]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:12:32,123]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641218285769064448,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T18:12:32.5888251+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:13:56,030]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:13:56,037]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:13:56,080]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641218637910245376,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T18:13:56.5456735+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:13:56,319]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第2条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-05 18:13:56,323]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBind': '641218637910245376', 'StoreId': '640825655000301568', 'PosId': '640846608296050688', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-05 18:13:56,348]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":640806478231371776,"Sort":640806478231371776,"PId":640806439056572416,"Code":"0210","Name":"10010","PyCode":"10010"},{"Id":640806513107009536,"Sort":640806513107009536,"PId":640806478231371776,"Code":"0101","Name":"0101","PyCode":"01010"},{"Id":640818672624992256,"Sort":640818672624992256,"PId":640818473672376320,"Code":"00201","Name":"薯片","PyCode":"sp"},{"Id":640818774064234496,"Sort":640818774064234496,"PId":640818473672376320,"Code":"00202","Name":"称重商品","PyCode":"czsp"},{"Id":640826046882512896,"Sort":640826046882512896,"PId":0,"Code":"01","Name":"零食","PyCode":"ls"},{"Id":640826354882838528,"Sort":640826354882838528,"PId":640826046882512896,"Code":"02","Name":"休闲零食","PyCode":"xxls"},{"Id":640826448612950016,"Sort":640826448612950016,"PId":640826046882512896,"Code":"03","Name":"速冻食品","PyCode":"sdsp"},{"Id":640828048018505728,"Sort":640828048018505728,"PId":0,"Code":"04","Name":"酒水饮料","PyCode":"jsyl"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:13:56,352]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第9条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-05 18:13:56,354]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBind': '641218637910245376', 'StoreId': '640825655000301568', 'PosId': '640846608296050688', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-05 18:13:56,419]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":640828650089873408,"Sort":640828650089873408,"ProductCategoryId":640826046882512896,"Code":"001","Name":"葡萄酒","PyCode":"ptj","Spec":"瓶","PricingMode":2}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:16:55,015]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:16:55,021]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:16:55,055]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641219388665495552,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T18:16:55.5397813+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:16:55,289]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第2条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-05 18:16:55,292]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBind': '641219388665495552', 'StoreId': '640825655000301568', 'PosId': '640846608296050688', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-05 18:16:55,319]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":640806478231371776,"Sort":640806478231371776,"PId":640806439056572416,"Code":"0210","Name":"10010","PyCode":"10010"},{"Id":640806513107009536,"Sort":640806513107009536,"PId":640806478231371776,"Code":"0101","Name":"0101","PyCode":"01010"},{"Id":640818672624992256,"Sort":640818672624992256,"PId":640818473672376320,"Code":"00201","Name":"薯片","PyCode":"sp"},{"Id":640818774064234496,"Sort":640818774064234496,"PId":640818473672376320,"Code":"00202","Name":"称重商品","PyCode":"czsp"},{"Id":640826046882512896,"Sort":640826046882512896,"PId":0,"Code":"01","Name":"零食","PyCode":"ls"},{"Id":640826354882838528,"Sort":640826354882838528,"PId":640826046882512896,"Code":"02","Name":"休闲零食","PyCode":"xxls"},{"Id":640826448612950016,"Sort":640826448612950016,"PId":640826046882512896,"Code":"03","Name":"速冻食品","PyCode":"sdsp"},{"Id":640828048018505728,"Sort":640828048018505728,"PId":0,"Code":"04","Name":"酒水饮料","PyCode":"jsyl"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:16:55,537]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第9条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-05 18:16:55,540]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBind': '641219388665495552', 'StoreId': '640825655000301568', 'PosId': '640846608296050688', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-05 18:16:55,613]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":640828650089873408,"Sort":640828650089873408,"ProductCategoryId":640826046882512896,"Code":"001","Name":"葡萄酒","PyCode":"ptj","Spec":"瓶","PricingMode":2}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:18:15,917]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-05 18:18:15,919]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-05 18:18:15,953]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":641219727997272064,"TenantId":1,"StoreId":640825655000301568,"PosId":640846608296050688,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-05T18:18:16.4432838+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:18:16,176]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第2条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-05 18:18:16,178]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBind': '641219727997272064', 'StoreId': '640825655000301568', 'PosId': '640846608296050688', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-05 18:18:16,206]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":640806478231371776,"Sort":640806478231371776,"PId":640806439056572416,"Code":"0210","Name":"10010","PyCode":"10010"},{"Id":640806513107009536,"Sort":640806513107009536,"PId":640806478231371776,"Code":"0101","Name":"0101","PyCode":"01010"},{"Id":640818672624992256,"Sort":640818672624992256,"PId":640818473672376320,"Code":"00201","Name":"薯片","PyCode":"sp"},{"Id":640818774064234496,"Sort":640818774064234496,"PId":640818473672376320,"Code":"00202","Name":"称重商品","PyCode":"czsp"},{"Id":640826046882512896,"Sort":640826046882512896,"PId":0,"Code":"01","Name":"零食","PyCode":"ls"},{"Id":640826354882838528,"Sort":640826354882838528,"PId":640826046882512896,"Code":"02","Name":"休闲零食","PyCode":"xxls"},{"Id":640826448612950016,"Sort":640826448612950016,"PId":640826046882512896,"Code":"03","Name":"速冻食品","PyCode":"sdsp"},{"Id":640828048018505728,"Sort":640828048018505728,"PId":0,"Code":"04","Name":"酒水饮料","PyCode":"jsyl"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-05 18:18:16,417]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第9条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-05 18:18:16,419]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBind': '641219727997272064', 'StoreId': '640825655000301568', 'PosId': '640846608296050688', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-05 18:18:16,483]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":640828650089873408,"Sort":640828650089873408,"ProductCategoryId":640826046882512896,"Code":"001","Name":"葡萄酒","PyCode":"ptj","Spec":"瓶","PricingMode":2}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}

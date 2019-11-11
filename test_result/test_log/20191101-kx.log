@@ -1,0 +1,18 @@
+[2019-11-01 15:00:09,604]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第1条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-01 15:00:09,607]-[INFO]-[日志信息]:URL：http://192.168.1.86:3000/mock/11/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '2', 'ClientPosBind': '1', 'StoreId': '123', 'PosId': '333', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-01 15:00:09,638]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":1,"Sort":1,"PId":0,"Code":"01","Name":"零食","PyCode":"LS"},{"Id":2,"Sort":2,"PId":1,"Code":"02","Name":"休闲零食","PyCode":"XXLS"},{"Id":3,"Sort":3,"PId":1,"Code":"03","Name":"速冻食品","PyCode":"SDSP"},{"Id":4,"Sort":4,"PId":0,"Code":"04","Name":"酒水饮料","PyCode":"JSYL"},{"Id":5,"Sort":5,"PId":4,"Code":"05","Name":"酒水","PyCode":"JS"},{"Id":6,"Sort":6,"PId":4,"Code":"06","Name":"冲调饮品","PyCode":"CTYP"}],"TargetUrl":"string","Success":true,"Error":{"Code":0,"Message":"string","Details":"string","ValidationErrors":[{"Message":"string","Members":["string"]}]},"UnAuthorizedRequest":true,"__abp":true}
+[2019-11-01 15:00:09,844]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第3条测试用例:不存在的店铺信息，获取商品分类信息失败----
+[2019-11-01 15:00:09,847]-[INFO]-[日志信息]:URL：http://192.168.1.86:3000/mock/11/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '0001', 'ClientPosBind': '1', 'StoreId': '1', 'PosId': '1', 'MachineMac': 'MachineMac', 'MachineName': 'MachineName'}
+[2019-11-01 15:00:09,871]-[INFO]-[日志信息]:ActualResult：{}
+[2019-11-01 15:00:10,066]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第4条测试用例:MachineMac为空，获取商品分类数据失败----
+[2019-11-01 15:00:10,068]-[INFO]-[日志信息]:URL：http://192.168.1.86:3000/mock/11/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '2', 'ClientPosBind': '1', 'StoreId': '123', 'PosId': '333', 'MachineMac': '', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-01 15:00:10,090]-[INFO]-[日志信息]:ActualResult：{}
+[2019-11-01 15:00:10,286]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第5条测试用例:MachineMac为None，获取商品分类数据失败----
+[2019-11-01 15:00:10,288]-[INFO]-[日志信息]:URL：http://192.168.1.86:3000/mock/11/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '2', 'ClientPosBind': '1', 'StoreId': '123', 'PosId': '333', 'MachineMac': None, 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-01 15:00:10,322]-[INFO]-[日志信息]:ActualResult：{}
+[2019-11-01 15:00:10,515]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第6条测试用例:MachineMac不为string，获取商品分类数据失败----
+[2019-11-01 15:00:10,517]-[INFO]-[日志信息]:URL：http://192.168.1.86:3000/mock/11/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '2', 'ClientPosBind': '1', 'StoreId': '123', 'PosId': '333', 'MachineMac': 1, 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-01 15:00:10,541]-[INFO]-[日志信息]:ActualResult：{}
+[2019-11-01 15:00:10,736]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第7条测试用例:MachineMac错误，获取商品分类数据失败----
+[2019-11-01 15:00:10,738]-[INFO]-[日志信息]:URL：http://192.168.1.86:3000/mock/11/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '2', 'ClientPosBind': '1', 'StoreId': '123', 'PosId': '333', 'MachineMac': '01-09', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-01 15:00:10,760]-[INFO]-[日志信息]:ActualResult：{}

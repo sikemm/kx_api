@@ -1,0 +1,528 @@
+[2019-11-08 14:11:59,813]-[INFO]-[日志信息]:---=正在执行Auth模块第9条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:11:59,828]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 14:12:01,696]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642244936913125376,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T14:12:05.2963778+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:12:02,047]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第1条测试用例:登录pos端----
+[2019-11-08 14:12:02,050]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{'ClientPosBindId': '642244936913125376', 'UserName': 'ly', 'Password': '123456'}
+[2019-11-08 14:13:20,367]-[INFO]-[日志信息]:---=正在执行Auth模块第9条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:13:20,369]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 14:13:20,415]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642245268250558464,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T14:13:24.2927515+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:13:20,750]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第1条测试用例:登录pos端----
+[2019-11-08 14:13:20,752]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{'ClientPosBindId': '642245268250558464', 'UserName': 'ly', 'Password': '123456'}
+[2019-11-08 14:14:57,894]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:14:57,896]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-08 14:16:06,471]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:16:06,535]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-08 14:16:31,875]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:16:31,881]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{'TenancyName': 'default', 'StoreCode': 'CD', 'PosCode': '1', 'CommunicationPassword': '123456', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR', 'Platform': 1}
+[2019-11-08 14:17:01,015]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:17:01,021]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 14:17:01,056]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642246193757290496,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T14:17:04.9505988+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:18:14,192]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:18:14,198]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 14:18:14,230]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642246500688068608,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T14:18:18.1287236+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:21:53,808]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:21:53,815]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 14:21:53,847]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642247421895639040,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T14:21:57.7617027+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:21:54,183]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第2条测试用例:登录pos端----
+[2019-11-08 14:21:54,185]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "642247421895639040",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-08 14:21:55,115]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IllGUElDUDRQREFEVUs0RFZIUFlJWFVGNFRZNERHREpOIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiMiIsImp0aSI6IjBmNDM4OGQ4LTQzYjItNDczMy1hZTE1LWY2NzhhYjYwMWZjZiIsImlhdCI6MTU3MzE5NDExOCwiSnd0Q2xpZW50VW5pcXVlSWQiOiIzMjQ0Mzc3ZS02MTE4LTQyMjUtYjg0OS0wN2MyMDJhMWQ1YWMiLCJKd3RDbGllbnRTdG9yZUlkIjoiNjQxOTMxMzgxNzk4MDc2NDE2IiwiSnd0Q2xpZW50VGVuYW50SWQiOiIxIiwiSnd0Q2xpZW50UG9zSWQiOiI2NDE5MzE0Mzg1NjM3ODY3NTIiLCJuYmYiOjE1NzMxOTQxMTgsImV4cCI6MTU3MzI4MDUxOCwiaXNzIjoiR3Jhc3BTYWFzIiwiYXVkIjoiR3Jhc3BTYWFzIn0.L_xN9IeM6K1okuDOjiu6vhwzNId8oCBM3nlPgZ0dV6Q","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:29:27,034]-[INFO]-[日志信息]:---=正在执行Auth模块第9条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:29:27,036]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 14:29:27,068]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642249322963927040,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T14:29:31.0119114+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:29:27,401]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第2条测试用例:登录pos端----
+[2019-11-08 14:29:27,403]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "642249322963927040",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-08 14:29:27,470]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IllGUElDUDRQREFEVUs0RFZIUFlJWFVGNFRZNERHREpOIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiMiIsImp0aSI6IjVhN2U5OWJiLWYwNGQtNDk4ZC1iZmQ1LTEzZDg3YjM0ZGY3MiIsImlhdCI6MTU3MzE5NDU3MSwiSnd0Q2xpZW50VW5pcXVlSWQiOiIxNTc1YTI1Zi1kZDgwLTQyZTQtOGJhNS00N2Y5YjVhNjIxZWUiLCJKd3RDbGllbnRTdG9yZUlkIjoiNjQxOTMxMzgxNzk4MDc2NDE2IiwiSnd0Q2xpZW50VGVuYW50SWQiOiIxIiwiSnd0Q2xpZW50UG9zSWQiOiI2NDE5MzE0Mzg1NjM3ODY3NTIiLCJuYmYiOjE1NzMxOTQ1NzEsImV4cCI6MTU3MzI4MDk3MSwiaXNzIjoiR3Jhc3BTYWFzIiwiYXVkIjoiR3Jhc3BTYWFzIn0.FVmro5tztwSpZHpTb_nSoyJu8UlbBzfg_EJCyWQLohg","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:40:41,488]-[INFO]-[日志信息]:---=正在执行Auth模块第9条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 14:40:57,890]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 14:41:35,509]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642252286860460032,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T14:41:15.154012+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 14:44:04,103]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第89条测试用例:登录pos端----
+[2019-11-08 14:44:22,679]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "642252286860460032",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-08 14:44:49,363]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IllGUElDUDRQREFEVUs0RFZIUFlJWFVGNFRZNERHREpOIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiMiIsImp0aSI6IjI5OTM5NjU3LThlNWMtNDE0MS04N2Q3LTgyM2NkNDkzNDQ2MSIsImlhdCI6MTU3MzE5NTQ3NSwiSnd0Q2xpZW50VW5pcXVlSWQiOiI1ZTgzMGMyYi0zNTU0LTRhMzUtYWQxZi1iYjY0NDVlNDc5N2EiLCJKd3RDbGllbnRTdG9yZUlkIjoiNjQxOTMxMzgxNzk4MDc2NDE2IiwiSnd0Q2xpZW50VGVuYW50SWQiOiIxIiwiSnd0Q2xpZW50UG9zSWQiOiI2NDE5MzE0Mzg1NjM3ODY3NTIiLCJuYmYiOjE1NzMxOTU0NzUsImV4cCI6MTU3MzI4MTg3NSwiaXNzIjoiR3Jhc3BTYWFzIiwiYXVkIjoiR3Jhc3BTYWFzIn0.QXhuTLekPK_m9I2TD4MX35lz4CtB_ZrJ_u-sPOwxmCI","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:06:34,286]-[INFO]-[日志信息]:---=正在执行Auth模块第9条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 15:06:34,295]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 15:06:34,339]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642258665419571200,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T15:06:35.9212457+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:06:34,667]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第89条测试用例:登录pos端----
+[2019-11-08 15:06:34,669]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "642258665419571200",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-08 15:06:34,732]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IllGUElDUDRQREFEVUs0RFZIUFlJWFVGNFRZNERHREpOIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiMiIsImp0aSI6IjdlNmUwMTk0LWU1ZjktNDM1NS1iZTQ2LWIwYzRhMGYwZWRlNSIsImlhdCI6MTU3MzE5Njc5NiwiSnd0Q2xpZW50VW5pcXVlSWQiOiJiNzJmY2M2ZS05YTIxLTRiYmEtYTZkZS1kNjk0NGJkMGJlMjQiLCJKd3RDbGllbnRTdG9yZUlkIjoiNjQxOTMxMzgxNzk4MDc2NDE2IiwiSnd0Q2xpZW50VGVuYW50SWQiOiIxIiwiSnd0Q2xpZW50UG9zSWQiOiI2NDE5MzE0Mzg1NjM3ODY3NTIiLCJuYmYiOjE1NzMxOTY3OTYsImV4cCI6MTU3MzI4MzE5NiwiaXNzIjoiR3Jhc3BTYWFzIiwiYXVkIjoiR3Jhc3BTYWFzIn0.HuPupcP8ZwcsuL9FPK3nZw-KvL8nQ-W3AE_n9D9A3js","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:13:39,385]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 15:13:39,391]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 15:13:39,422]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642260448468533248,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T15:13:41.0333318+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:13:39,737]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第2条测试用例:登录pos端----
+[2019-11-08 15:13:39,739]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "642260448468533248",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-08 15:13:39,803]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IllGUElDUDRQREFEVUs0RFZIUFlJWFVGNFRZNERHREpOIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiMiIsImp0aSI6IjM0MDRjM2E4LWJhNWEtNDg5YS05OWJlLWU2ZWI0YTcxYWI4NiIsImlhdCI6MTU3MzE5NzIyMSwiSnd0Q2xpZW50VW5pcXVlSWQiOiIwOGU5NjVlZC1iZDA0LTQ5OTktODU1Mi0wODE3MTM0MjYwZDUiLCJKd3RDbGllbnRTdG9yZUlkIjoiNjQxOTMxMzgxNzk4MDc2NDE2IiwiSnd0Q2xpZW50VGVuYW50SWQiOiIxIiwiSnd0Q2xpZW50UG9zSWQiOiI2NDE5MzE0Mzg1NjM3ODY3NTIiLCJuYmYiOjE1NzMxOTcyMjEsImV4cCI6MTU3MzI4MzYyMSwiaXNzIjoiR3Jhc3BTYWFzIiwiYXVkIjoiR3Jhc3BTYWFzIn0.SBamPiBl2H4Gx7h6mWdKYnlVUoosS_y3FT_B5QnxF7w","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:13:40,137]-[INFO]-[日志信息]:---=正在执行CheckOut模块第3条测试用例:上传账单----
+[2019-11-08 15:13:40,139]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Checkout/PostBill，Params：{
+ "BillNumber": "0220191030160632790",
+ "BillType": 1,
+ "ClientBillOrderDetailList": [{
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 58.0,
+  "FinalTotal": 30.0,
+  "OriginalPrice": 44.0,
+  "OriginalTotal": 88.0,
+  "ProductStandardId": 4,
+  "Qty": 2.0,
+  "RowIndex": 1,
+  "ServerPrice": 44.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 17.0,
+  "FinalTotal": 38.0,
+  "OriginalPrice": 55.0,
+  "OriginalTotal": 55.0,
+  "ProductStandardId": 5,
+  "Qty": 1.0,
+  "RowIndex": 2,
+  "ServerPrice": 55.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 0.0,
+  "FinalTotal": 66.0,
+  "OriginalPrice": 33.0,
+  "OriginalTotal": 66.0,
+  "ProductStandardId": 3,
+  "Qty": 2.0,
+  "RowIndex": 3,
+  "ServerPrice": 33.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 4.4,
+  "FinalTotal": 17.6,
+  "OriginalPrice": 22.0,
+  "OriginalTotal": 22.0,
+  "ProductStandardId": 2,
+  "Qty": 1.0,
+  "RowIndex": 4,
+  "ServerPrice": 22.0
+ }],
+ "ClientBillPayDetailList": [{
+  "Amount": 151.6,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "PaymentWayId": 2,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "RowIndex": 1
+ }, {
+  "Amount": 75.0,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 2
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 2
+  },
+  "PaymentWayId": 5,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "ProjectMasterId": 1,
+   "RowIndex": 2
+  },
+  "RowIndex": 2
+ }, {
+  "Amount": 4.4,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 3
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 3
+  },
+  "PaymentWayId": 5,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "ProjectMasterId": 3,
+   "RowIndex": 3
+  },
+  "RowIndex": 3
+ }],
+ "ClientShiftKey": "",
+ "CreationTime": "",
+ "CreatorUserId": 0,
+ "CreatorUserName": "",
+ "DiscountTotal": 79.4,
+ "FinalTotal": 151.6,
+ "MemberPersonName": "",
+ "OriginalTotal": 231.0,
+ "Remark": ""
+}
+[2019-11-08 15:13:41,066]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"Method arguments are not valid! See ValidationErrors for details.","Details":"AbpValidationException: Method arguments are not valid! See ValidationErrors for details.\r\nThe following errors were detected during validation.\r\n - Error converting value {null} to type 'System.DateTime'. Path 'CreationTime', line 104, position 19.\r\n\r\nSTACK TRACE:    at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()\r\n   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()\r\n   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":[{"Message":"Error converting value {null} to type 'System.DateTime'. Path 'CreationTime', line 104, position 19.","Members":["creationTime"]}]},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:13:41,069]-[ERROR]-[日志信息]:ERROR：Method arguments are not valid! See ValidationErrors for details.
+[2019-11-08 15:13:41,072]-[ERROR]-[日志信息]:用例执行失败： :: {'Success': True} != {'Success': False}
+[2019-11-08 15:57:20,941]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 15:57:20,947]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 15:57:20,980]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642271444792770560,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T15:57:22.7612139+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:57:21,298]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第2条测试用例:登录pos端----
+[2019-11-08 15:57:21,300]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "642271444792770560",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-08 15:57:21,393]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IllGUElDUDRQREFEVUs0RFZIUFlJWFVGNFRZNERHREpOIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiMiIsImp0aSI6ImUyMTA1MDBmLWFmYTUtNDQ2OC1hMTMyLTgzNTNhMTVhMzM1OCIsImlhdCI6MTU3MzE5OTg0MywiSnd0Q2xpZW50VW5pcXVlSWQiOiJhZjU2NjFjNC1lZTNhLTQ1MDgtOGE1Yy05YjI3MjRlYjE3YmUiLCJKd3RDbGllbnRTdG9yZUlkIjoiNjQxOTMxMzgxNzk4MDc2NDE2IiwiSnd0Q2xpZW50VGVuYW50SWQiOiIxIiwiSnd0Q2xpZW50UG9zSWQiOiI2NDE5MzE0Mzg1NjM3ODY3NTIiLCJuYmYiOjE1NzMxOTk4NDMsImV4cCI6MTU3MzI4NjI0MywiaXNzIjoiR3Jhc3BTYWFzIiwiYXVkIjoiR3Jhc3BTYWFzIn0.oDL-nijy6UOA-s5blmta8Hmo42slkLBOpSpVdDTm3Mc","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:57:21,753]-[INFO]-[日志信息]:---=正在执行CheckOut模块第3条测试用例:上传账单----
+[2019-11-08 15:57:21,755]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Checkout/PostBill，Params：{
+ "BillNumber": "0220191030160632790",
+ "BillType": 1,
+ "ClientBillOrderDetailList": [{
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 58.0,
+  "FinalTotal": 30.0,
+  "OriginalPrice": 44.0,
+  "OriginalTotal": 88.0,
+  "ProductStandardId": 4,
+  "Qty": 2.0,
+  "RowIndex": 1,
+  "ServerPrice": 44.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 17.0,
+  "FinalTotal": 38.0,
+  "OriginalPrice": 55.0,
+  "OriginalTotal": 55.0,
+  "ProductStandardId": 5,
+  "Qty": 1.0,
+  "RowIndex": 2,
+  "ServerPrice": 55.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 0.0,
+  "FinalTotal": 66.0,
+  "OriginalPrice": 33.0,
+  "OriginalTotal": 66.0,
+  "ProductStandardId": 3,
+  "Qty": 2.0,
+  "RowIndex": 3,
+  "ServerPrice": 33.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 4.4,
+  "FinalTotal": 17.6,
+  "OriginalPrice": 22.0,
+  "OriginalTotal": 22.0,
+  "ProductStandardId": 2,
+  "Qty": 1.0,
+  "RowIndex": 4,
+  "ServerPrice": 22.0
+ }],
+ "ClientBillPayDetailList": [{
+  "Amount": 151.6,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "PaymentWayId": 2,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "RowIndex": 1
+ }, {
+  "Amount": 75.0,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 2
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 2
+  },
+  "PaymentWayId": 5,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "ProjectMasterId": 1,
+   "RowIndex": 2
+  },
+  "RowIndex": 2
+ }, {
+  "Amount": 4.4,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 3
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 3
+  },
+  "PaymentWayId": 5,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "ProjectMasterId": 3,
+   "RowIndex": 3
+  },
+  "RowIndex": 3
+ }],
+ "ClientShiftKey": "",
+ "CreationTime": "2019-11-08 15:56:52",
+ "CreatorUserId": 0,
+ "CreatorUserName": "",
+ "DiscountTotal": 79.4,
+ "FinalTotal": 151.6,
+ "MemberPersonName": "",
+ "OriginalTotal": 231.0,
+ "Remark": ""
+}
+[2019-11-08 15:57:21,806]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"Method arguments are not valid! See ValidationErrors for details.","Details":"AbpValidationException: Method arguments are not valid! See ValidationErrors for details.\r\nThe following errors were detected during validation.\r\n - The ClientShiftKey field is required.\r\n\r\nSTACK TRACE:    at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()\r\n   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()\r\n   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":[{"Message":"The ClientShiftKey field is required.","Members":["clientShiftKey"]}]},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 15:57:21,809]-[ERROR]-[日志信息]:ERROR：Method arguments are not valid! See ValidationErrors for details.
+[2019-11-08 15:57:21,811]-[ERROR]-[日志信息]:用例执行失败： :: {'Success': True} != {'Success': False}
+[2019-11-08 16:05:58,235]-[INFO]-[日志信息]:---=正在执行Auth模块第1条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-08 16:05:58,241]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-08 16:05:58,298]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":642273614715944960,"TenantId":1,"StoreId":641931381798076416,"PosId":641931438563786752,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-08T16:06:00.1110445+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 16:05:58,627]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第2条测试用例:登录pos端----
+[2019-11-08 16:05:58,629]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "642273614715944960",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-08 16:05:58,735]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IllGUElDUDRQREFEVUs0RFZIUFlJWFVGNFRZNERHREpOIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiMiIsImp0aSI6ImJjYzc0M2YxLTM3MzktNDg3NS05MDc3LTFkOWQ3NDQ4YTdmZCIsImlhdCI6MTU3MzIwMDM2MCwiSnd0Q2xpZW50VW5pcXVlSWQiOiJjMzA5NmQ3Yy1jZmUxLTQ5NzktOWQyMS1lMDQxNzQyMmI0NzQiLCJKd3RDbGllbnRTdG9yZUlkIjoiNjQxOTMxMzgxNzk4MDc2NDE2IiwiSnd0Q2xpZW50VGVuYW50SWQiOiIxIiwiSnd0Q2xpZW50UG9zSWQiOiI2NDE5MzE0Mzg1NjM3ODY3NTIiLCJuYmYiOjE1NzMyMDAzNjAsImV4cCI6MTU3MzI4Njc2MCwiaXNzIjoiR3Jhc3BTYWFzIiwiYXVkIjoiR3Jhc3BTYWFzIn0.e6iPF2uSLBCKTPPziSdUgvCm3Notxe29C5bBizj8nDY","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 16:05:59,075]-[INFO]-[日志信息]:---=正在执行CheckOut模块第3条测试用例:上传账单----
+[2019-11-08 16:05:59,077]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Checkout/PostBill，Params：{
+ "BillNumber": "0220191030160632790",
+ "BillType": 1,
+ "ClientBillOrderDetailList": [{
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 58.0,
+  "FinalTotal": 30.0,
+  "OriginalPrice": 44.0,
+  "OriginalTotal": 88.0,
+  "ProductStandardId": 4,
+  "Qty": 2.0,
+  "RowIndex": 1,
+  "ServerPrice": 44.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 17.0,
+  "FinalTotal": 38.0,
+  "OriginalPrice": 55.0,
+  "OriginalTotal": 55.0,
+  "ProductStandardId": 5,
+  "Qty": 1.0,
+  "RowIndex": 2,
+  "ServerPrice": 55.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 0.0,
+  "FinalTotal": 66.0,
+  "OriginalPrice": 33.0,
+  "OriginalTotal": 66.0,
+  "ProductStandardId": 3,
+  "Qty": 2.0,
+  "RowIndex": 3,
+  "ServerPrice": 33.0
+ }, {
+  "BackQty": 0.0,
+  "BillNumber": "0220191030160632790",
+  "DiscountTotal": 4.4,
+  "FinalTotal": 17.6,
+  "OriginalPrice": 22.0,
+  "OriginalTotal": 22.0,
+  "ProductStandardId": 2,
+  "Qty": 1.0,
+  "RowIndex": 4,
+  "ServerPrice": 22.0
+ }],
+ "ClientBillPayDetailList": [{
+  "Amount": 151.6,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "PaymentWayId": 2,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 1
+  },
+  "RowIndex": 1
+ }, {
+  "Amount": 75.0,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 2
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 2
+  },
+  "PaymentWayId": 5,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "ProjectMasterId": 1,
+   "RowIndex": 2
+  },
+  "RowIndex": 2
+ }, {
+  "Amount": 4.4,
+  "BillNumber": "0220191030160632790",
+  "GraspPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 3
+  },
+  "MemberCardPayLog": {
+   "BillNumber": "0220191030160632790",
+   "RowIndex": 3
+  },
+  "PaymentWayId": 5,
+  "ProjectPayLog": {
+   "BillNumber": "0220191030160632790",
+   "ProjectMasterId": 3,
+   "RowIndex": 3
+  },
+  "RowIndex": 3
+ }],
+ "ClientShiftKey": "1234",
+ "CreationTime": "2019-11-08 15:56:52",
+ "CreatorUserId": 0,
+ "CreatorUserName": "",
+ "DiscountTotal": 79.4,
+ "FinalTotal": 151.6,
+ "MemberPersonName": "",
+ "OriginalTotal": 231.0,
+ "Remark": ""
+}
+[2019-11-08 16:05:59,396]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"An error occurred while updating the entries. See the inner exception for details.","Details":"DbUpdateException: An error occurred while updating the entries. See the inner exception for details.\r\nSTACK TRACE:    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)\r\n   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken)\r\n   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken)\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext)\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync()\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.CompleteUowAsync()\r\n   at Abp.Domain.Uow.UnitOfWorkBase.CompleteAsync()\r\n   at Abp.AspNetCore.Mvc.Uow.AbpUowActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\nMySqlException: Cannot add or update a child row: a foreign key constraint fails (`graspsaasdb`.`clientbillmasters`, CONSTRAINT `FK_ClientBillMasters_ClientPosBinds_ClientPosBindId` FOREIGN KEY (`ClientPosBindId`) REFERENCES `clientposbinds` (`Id`) ON DELETE CASCADE)\r\nSTACK TRACE:    at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 81\r\n   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 307\r\n   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 292\r\n   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\TextCommandExecutor.cs:line 37\r\n   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\nMySqlException: Cannot add or update a child row: a foreign key constraint fails (`graspsaasdb`.`clientbillmasters`, CONSTRAINT `FK_ClientBillMasters_ClientPosBinds_ClientPosBindId` FOREIGN KEY (`ClientPosBindId`) REFERENCES `clientposbinds` (`Id`) ON DELETE CASCADE)\r\nSTACK TRACE:    at MySqlConnector.Core.ServerSession.TryAsyncContinuation(Task`1 task) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\ServerSession.cs:line 1252\r\n   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\ResultSet.cs:line 43\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-08 16:05:59,403]-[ERROR]-[日志信息]:ERROR：An error occurred while updating the entries. See the inner exception for details.
+[2019-11-08 16:05:59,406]-[ERROR]-[日志信息]:用例执行失败： :: {'Success': True} != {'Success': False}
