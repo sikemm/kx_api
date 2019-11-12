@@ -30,31 +30,51 @@ class TestCases(unittest.TestCase):
         global test_result
         method = case['Method']
         url = case['url']
+        print(case['Params'])
         #替换测试用例中的params的参数
-        params = re_replace(case['Params'])
+        if case['Params'] == None:
+            params = case['Params']
+        elif case['Method'].upper() == 'GET':
+            params = eval(re_replace(case['Params']))
+        elif case['Method'].upper() == 'POST':
+            params = re_replace(case['Params'])
         MyLog().info('---=正在执行{0}模块第{1}条测试用例:{2}----'.format(case['Module'],case['CaseId'],case['Title']))
         MyLog().info('URL：{0}，Params：{1}'.format(case['url'],params))
+        #发起请求
         resp = HttpRequest().http_request(method, url, params,getattr(Reflex,'header'))
+        print(type(resp))
+        print(resp)
         print(resp.text)
         MyLog().info('ActualResult：{}'.format(resp.text))
-        # 绑定成功后，获取服务器返回的绑定posid，店铺storeid等,注意str的使用，设置时，只能是字符串
-        if resp.text.find('PosId') != -1:
-            setattr(Reflex, 'ClientPosBind', str(resp.json()['Result']['Id']))
-            setattr(Reflex, 'StoreId', str(resp.json()['Result']['StoreId']))
-            setattr(Reflex, 'PosId', str(resp.json()['Result']['PosId']))
-        # 登陆成功之后，获取服务器返回的token信息
-        if resp.text.find('AccessToken') != -1:
+        # 绑定成功后，获取服务器返回的店铺storeid等,posid,绑定posid，注意str的使用，设置时，只能是字符串
+        if resp.text.find('businessType') != -1:
+            setattr(Reflex, 'StoreId', resp.json()['result']['id'])
+        elif resp.text.find('communicationPassword') != -1:
+            setattr(Reflex, 'PosId', resp.json()['result']['id'])
+        elif resp.text.find('PosId') != -1:
+            setattr(Reflex, 'ClientPosBindId', str(resp.json()['Result']['Id']))
+
+        # web登录成功后，返回的body里面带有token信息，需要将token信息放在header里面一起请求
+        if resp.text.find('accessToken') != -1:
+            header = getattr(Reflex, 'header')
+            AccessToken = resp.json()['result']['accessToken']
+            header['Authorization'] = 'Bearer ' + AccessToken
+            setattr(Reflex, 'header', header)
+        # pos端登陆成功之后，获取服务器返回的token信息
+        elif resp.text.find('AccessToken') != -1:
             header = getattr(Reflex, 'header')
             AccessToken = resp.json()['Result']['AccessToken']
             header['Authorization'] = 'Bearer ' + AccessToken
-            # 用户登录时，会返回一个班次号信息
-            # ShiftKey = resp.json()['Result']['ShiftKey']
-            # setattr(Reflex,'ShiftKey',ShiftKey)
             setattr(Reflex, 'header', header)
+
         try:
-            #----------使用什么来断言，还有待考虑参考yapi上的接口返回来做demo-------
+            #----------待优化-------
             ActualResult={}
-            ActualResult['Success'] = resp.json()['Success']
+            if case['Method'] == 'web':
+                ActualResult['success'] = resp.json()['success']
+            else:
+                ActualResult['Success'] = resp.json()['Success']
+
             self.assertEqual(eval(case['ExpectedResult']),ActualResult)
             test_result = 'pass'
         except AssertionError as e:

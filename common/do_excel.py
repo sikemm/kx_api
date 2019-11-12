@@ -63,7 +63,7 @@ class DoExcel:
         wb.close()
 
     def read_tel(self,sheet_name):
-        '''读取会员办卡所需的电话号码'''
+        '''读取会员办卡所需的电话号码,  账单编号'''
         wb = load_workbook(self.file_name)
         sheet = wb[sheet_name]
         tel = sheet.cell(2,1).value

@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>20191112-快消接口测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 120%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">20191112-快消接口测试报告</h1>
+<p class='attribute'><strong>测试人员 : </strong> liuyan</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-11-12 18:11:06</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:06.567180</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 12，通过 11，失败 1，通过率= 91.67%</p>
+
+<p class='description'>基础信息，账单，绑定接口</p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 91.67% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 11 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 12 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 16px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>kx_api.test_cases.test_auth.TestCases: 该类主要是用来写测试用例</td>
+    <td class="text-center">11</td>
+    <td class="text-center">11</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',11)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align="left">
+    <pre>
+    
+pt1_1: [2019-11-12 18:11:06,882]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:登录web端----
+[2019-11-12 18:11:06,884]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/TokenAuth/Authenticate，Params：{
+  "tenancyName": "default",
+  "userNameOrEmailAddress": "admin",
+  "password": "admin"
+}
+[2019-11-12 18:11:06,935]-[INFO]-[日志信息]:ActualResult：{"result":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IjIwMDQ0NWNmLTQ4MzctZmQ4Mi0xYjBlLTM5ZjE1NmQ4MzZjZCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjEiLCJqdGkiOiJkNDI0YjlmYS0wMDkzLTQ3N2YtOGRkYS1mNGI2YTFmMGFlY2EiLCJpYXQiOjE1NzM1NTM0NzIsIkp3dFdlYlVuaXF1ZUlkIjoiNjIxYWZkMTItYmUwNS00YzljLWI3MzQtNDViNmVlZjA2ODIyIiwiSnd0V2ViVGVuYW50SWQiOiIxIiwibmJmIjoxNTczNTUzNDcyLCJleHAiOjE1NzM2Mzk4NzIsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.sterS494td4rJUPIno8rAQan8OTcUqx70IqphWqJXMY","encryptedAccessToken":"wNYmO41/48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA/QhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi/FyB6axBY+6gq1GL+uRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U+og9pkHw9/QR4Nl/DPnoP9JYDMpZ1zxx09u6s0GZ9/Q5Sjk+L0UfcSCbl38X8he5w9UIn/Hvxh7ysM1CiPLsoOwtbiieSRVmrmt0JjnipAn4/K283F8GrGwzwgehWsqefmUnM0ckMwP9ZAdwQxWDhxv0IqNw4tDhwUYs/1SYdYozdNzgByhgNOBPzQDObNLlWc4vV5VMOiawP3h2JtL6dYi/SDvTHbtZx7VlqTtFgFGwJ9nP84HZP3D9lB+hXgSvGA+VHUZkywQcOaVSGXHJphtX06SLvXtXNBvGoXzqEcP3QoTAudBO2bhkzSf5BRbWmoZoU0EvlNZfXvJkDPPXZ+Uy+ZPJOB6BcL7hLtVXLAp07SqpkvjCTggs/Ww6P7S/iLQgEovCba9bRC11jKmKDRuYa1b5SvcEg73fLzVxyCe5upWmHvsiQ9vK9NH4OLaMmvuo1KOAoIOlCCD1MitqcYZEwbDh30tkEAaL8+KiLmHRHBIjzzQWKZa3j8YbvGhHNfMeDPt3CorggOk1jeJ6snWsRBkxOtPRCMAT7MxUlTiaXeNjRttEEghikhnS2i2tFztQRUxXFQn6MhxorFNUKLvOropj1cxm34YeOvVCqc56MexIQBk3FuQHKNvATTJTcmrmq41gT4c1KU3JDhpbK3eM0IBY2U8Bu2lgTjfrq/O6fvLPwQ1Dx/ecCWjI3XF3uyWeP0qjj5gCgGDQhfUgqEp14KDx+3F22yz82K/tuQUmJzzEVRxiEleRROji3y9zSiStxnSZXNZFGVnsrMeuKG2bfPc8nj8WtWEtDoPtXwUmdB7/7zBYd644/F4gALTPEI2vm5nV5XZPbHKXnwyBRGXrO/+LeTZzs8IRJjND1Q2JUWdJeEP1eqbHdrpWB5xBB/WBtjt0oh0yKDKz+15VGf9v5X0ZH4SM2ePdE6qo6c5HkhE66NViY0oDnCdDzEppvxkcIOWRh10=","expireInSeconds":86400,"userId":1},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align="left">
+    <pre>
+    
+pt1_2: [2019-11-12 18:11:07,334]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:新建店铺----
+[2019-11-12 18:11:07,336]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Create，Params：{ 
+ "id":"",
+ "sort":"",
+ "tenantId":"1",
+ "isActive":true,
+ "code":"CD",
+ "name":"红旗连锁",
+ "pyCode":"HQLS",
+ "businessType":1,
+ "businessTypeName":"直营",
+ "province":"四川省",
+ "city":"成都市",
+ "zone":"武侯区",
+ "street":"武侯大道888号",
+ "openTime":"08:00",
+ "closeTime":"22:00",
+ "address":"新希望大厦B座",
+ "storePhone":"15222222222",
+ "longitude":"经度",
+ "latitude":"纬度"
+ 
+}
+[2019-11-12 18:11:07,363]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"643754664688353280","sort":"643754664688353280","isActive":true,"code":"CD","name":"红旗连锁","pyCode":"HQLS","businessType":1,"businessTypeName":"直营","province":"四川省","city":"成都市","zone":"武侯区","street":"武侯大道888号","address":"新希望大厦B座","openTime":"08:00","closeTime":"22:00","storePhone":"15222222222","longitude":"经度","latitude":"纬度","imageUrls":[]},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" align="left">
+    <pre>
+    
+pt1_3: [2019-11-12 18:11:07,758]-[INFO]-[日志信息]:---=正在执行web模块第3条测试用例:新增pos档案----
+[2019-11-12 18:11:07,760]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Create，Params：{
+  "id": "",
+  "sort": "",
+  "isActive": true,
+  "storeId": "643754664688353280",
+  "code": "1",
+  "name": "1",
+  "pyCode": "1",
+  "communicationPassword": "123456",
+  "machineName": "",
+  "storeIdName": "红旗连锁",
+  "storeCode": "CD"
+}
+[2019-11-12 18:11:07,786]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"643754666470932480","sort":"643754666470932480","isActive":true,"storeId":"643754664688353280","code":"1","name":"1","pyCode":"1","communicationPassword":"123456","machineName":"","storeIdName":"红旗连锁","storeCode":"CD"},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" align="left">
+    <pre>
+    
+pt1_4: [2019-11-12 18:11:08,165]-[INFO]-[日志信息]:---=正在执行Auth模块第13条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-12 18:11:08,167]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-12 18:11:08,201]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":643754668198985728,"TenantId":1,"StoreId":643754664688353280,"PosId":643754666470932480,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-12T18:11:13.2841957+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse in" align="left">
+    <pre>
+    
+pt1_5: [2019-11-12 18:11:08,588]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第15条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-12 18:11:08,590]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBindId': '643754668198985728', 'StoreId': '643754664688353280', 'PosId': '643754666470932480', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-12 18:11:08,614]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":642201231061680128,"Sort":642201231061680128,"PId":0,"Code":"1","Name":"1","PyCode":"11"},{"Id":642201468501229568,"Sort":642201468501229568,"PId":642201231061680128,"Code":"2","Name":"2","PyCode":"2"},{"Id":642201494715629568,"Sort":642201494715629568,"PId":642201468501229568,"Code":"3","Name":"3","PyCode":"33"},{"Id":642201547769380864,"Sort":642201547769380864,"PId":0,"Code":"4","Name":"4","PyCode":"4"},{"Id":642201595760607232,"Sort":642201595760607232,"PId":0,"Code":"5","Name":"5","PyCode":"5"},{"Id":642201780058324992,"Sort":642201780058324992,"PId":642201231061680128,"Code":"22","Name":"22","PyCode":"22"},{"Id":642201840678600704,"Sort":642201840678600704,"PId":642201231061680128,"Code":"33","Name":"33","PyCode":"33"},{"Id":642201949231382528,"Sort":642201949231382528,"PId":642201468501229568,"Code":"45","Name":"45","PyCode":"4545"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+642201231061680128
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse in" align="left">
+    <pre>
+    
+pt1_6: [2019-11-12 18:11:09,011]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第21条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-12 18:11:09,013]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBindId': '643754668198985728', 'StoreId': '643754664688353280', 'PosId': '643754666470932480', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-12 18:11:09,039]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":642203166665867264,"Sort":642220084529463296,"ProductCategoryId":642201231061680128,"Code":"001","Name":"零食","PyCode":"ls","Spec":"袋","PricingMode":1},{"Id":642220084529463296,"Sort":642203166665867264,"ProductCategoryId":642201231061680128,"Code":"1111","Name":"123123","PyCode":"123123123123","Spec":"500ML","PricingMode":1}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+642201231061680128
+642203166665867264
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse in" align="left">
+    <pre>
+    
+pt1_7: [2019-11-12 18:11:09,416]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第27条测试用例:已绑定的店铺且所有参数正确，获取商品规格数据成功----
+[2019-11-12 18:11:09,418]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardList，Params：{'TenantId': '1', 'ClientPosBindId': '643754668198985728', 'StoreId': '643754664688353280', 'PosId': '643754666470932480', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-12 18:11:09,446]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":642203166703616000,"ProductId":642203166665867264,"StandardName":"零食","StandardRelation":1.0000000000,"RetailPrice":10.0000000000,"MemberPrice":9.0000000000},{"Id":642220084563017728,"ProductId":642220084529463296,"StandardName":"个","StandardRelation":1.0000000000,"RetailPrice":3.0000000000,"MemberPrice":2.0000000000},{"Id":642220894785110016,"ProductId":642220084529463296,"StandardName":"箱","StandardRelation":2.0000000000,"RetailPrice":2.0000000000,"MemberPrice":2.0000000000},{"Id":642220894785110017,"ProductId":642220084529463296,"StandardName":"盒","StandardRelation":3.0000000000,"RetailPrice":0.0000000000,"MemberPrice":0.0000000000}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+642201231061680128
+642203166665867264
+642203166703616000
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse in" align="left">
+    <pre>
+    
+pt1_8: [2019-11-12 18:11:09,838]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第33条测试用例:已绑定的店铺且所有参数正确，获取商品规格条形码数据成功----
+[2019-11-12 18:11:09,840]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardBarCodeList，Params：{'TenantId': '1', 'ClientPosBindId': '643754668198985728', 'StoreId': '643754664688353280', 'PosId': '643754666470932480', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-12 18:11:09,910]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":642203166720393216,"BaseProductStandardId":642203166703616000,"BarCode":"123456789"},{"Id":642220084579794944,"BaseProductStandardId":642220084563017728,"BarCode":"12311123"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+642201231061680128
+642203166665867264
+642203166703616000
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse in" align="left">
+    <pre>
+    
+pt1_9: [2019-11-12 18:11:10,288]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第39条测试用例:已绑定的店铺且入参正确，获取结账方式成功----
+[2019-11-12 18:11:10,290]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBasePaymentWayList，Params：{'TenantId': '1', 'ClientPosBindId': '643754668198985728', 'StoreId': '643754664688353280', 'PosId': '643754666470932480', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-12 18:11:10,315]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":641895076527603712,"Sort":641895076527603712,"Code":"YH001","Name":"抹零","PyCode":"ML","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":641895076527603713,"Sort":641895076527603713,"Code":"YH002","Name":"优惠","PyCode":"YH","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":641895076527603714,"Sort":641895076527603714,"Code":"YH003","Name":"赠送","PyCode":"ZS","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":641895076527603715,"Sort":641895076527603715,"Code":"YH004","Name":"优惠券","PyCode":"YHQ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":641895076527603716,"Sort":641895076527603716,"Code":"YH005","Name":"免单","PyCode":"MD","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":641895076527603717,"Sort":641895076527603717,"Code":"00001","Name":"人民币","PyCode":"RMB","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":641895076527603718,"Sort":641895076527603718,"Code":"00002","Name":"任我行支付","PyCode":"RWXZF","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":641895076527603719,"Sort":641895076527603719,"Code":"00003","Name":"会员卡储值","PyCode":"HYKCZ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":642203309419003904,"Sort":642203309419003904,"Code":"QT","Name":"其他支付","PyCode":"qtzf","Remark":"的奋斗的地方","IsOpenMoneyBox":true,"PaymentWayType":2,"IsPreset":false,"ShortcutKey":"A"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+642201231061680128
+642203166665867264
+642203166703616000
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse in" align="left">
+    <pre>
+    
+pt1_10: [2019-11-12 18:11:10,703]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第45条测试用例:已绑定的店铺且入参正确，获取用户数据成功----
+[2019-11-12 18:11:10,705]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetUserList，Params：{'TenantId': '1', 'ClientPosBindId': '643754668198985728', 'StoreId': '643754664688353280', 'PosId': '643754666470932480', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-12 18:11:10,729]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":2,"UserName":"ly","PosClientSalt":"c93d8aa6-94d1-4a51-8bbc-cd6445c06a2c","PosClientPassword":"960E508EBB1E434C364FC0F52C197A36DB9833FA","Permission":null},{"Id":1,"UserName":"admin","PosClientSalt":"e0a5e886-1c59-4dc5-8497-50364c0929dc","PosClientPassword":"ABDAA6222B7D76A67D22883A9952C15BDCA817C3","Permission":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+642201231061680128
+642203166665867264
+642203166703616000
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_11</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse in" align="left">
+    <pre>
+    
+pt1_11: [2019-11-12 18:11:11,114]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第93条测试用例:登录pos端----
+[2019-11-12 18:11:11,116]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "643754668198985728",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-12 18:11:11,205]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IllGUElDUDRQREFEVUs0RFZIUFlJWFVGNFRZNERHREpOIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiMiIsImp0aSI6IjUyM2Q4ZWUyLTE2NGYtNDBiMi05NWZlLTkyY2VkMmRlZjY1MCIsImlhdCI6MTU3MzU1MzQ3NiwiSnd0Q2xpZW50VW5pcXVlSWQiOiIwMzE2OGFjNy0wZjY3LTQ0ZWItODVkMS0wY2VmZTk1ZGZiZjUiLCJKd3RDbGllbnRTdG9yZUlkIjoiNjQzNzU0NjY0Njg4MzUzMjgwIiwiSnd0Q2xpZW50VGVuYW50SWQiOiIxIiwiSnd0Q2xpZW50UG9zSWQiOiI2NDM3NTQ2NjY0NzA5MzI0ODAiLCJuYmYiOjE1NzM1NTM0NzYsImV4cCI6MTU3MzYzOTg3NiwiaXNzIjoiR3Jhc3BTYWFzIiwiYXVkIjoiR3Jhc3BTYWFzIn0.zF5BYTIQBQOJLX8U0WZzOjcnKrEJRWxpWrSLjWCc5Po","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+642201231061680128
+642203166665867264
+642203166703616000
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='failClass warning'>
+    <td>kx_api.test_cases.test_checkout.TestCases: 该类主要是用来写测试用例</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',1)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='ft2_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_checkOut_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_1'>失败</button>
+    <div id='div_ft2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_1'>失败</button>
+    <div id='div_ft2_1' class="collapse in" align="left">
+    <pre>
+    
+ft2_1: {
+  "BillNumber": "#BillNumber#",
+  "BillType": 1,
+  "ClientPosBindId": "#ClientPosBindId#",
+  "MemberUserId": 0,
+  "ClientShiftKey": "#ShiftKey#",
+  "CreationTime": "2019-11-12T06:22:39.435Z",
+  "CreatorUserId": 0,
+  "OriginalTotal": 100,
+  "DiscountTotal": 20,
+  "FinalTotal": 80,
+  "Remark": "使用现金，整单折扣20%",
+  "OriginalBillNumber": "",
+  "ClientBillOrderDetailList": [
+    {
+      "BillNumber": "#BillNumber#",
+      "RowIndex": 1,
+      "ProductStandardId": "#ProductStandardId#",
+      "BusinessManId": "#UserId#",
+      "IsGift": false,
+      "ServerPrice": 50,
+      "Qty": 2,
+      "BackQty": 0,
+      "OriginalTotal": 100,
+      "DiscountTotal": 20,
+      "FinalTotal": 80
+    }
+  ],
+  "ClientBillPayDetailList": [
+    {
+      "BillNumber": "#BillNumber#",
+      "RowIndex": 1,
+      "PaymentWayId": "#RMBId#",
+      "Amount": 80,
+      "ProjectPayLog": {
+        "BillNumber": "",
+        "RowIndex": 0,
+        "ProjectMasterId": 0,
+        "ProjectMasterName": ""
+      },
+      "MemberCardPayLog": {
+        "BillNumber": "",
+        "RowIndex": 0,
+        "MemberPayId": 0
+      },
+      "GraspPayLog": {
+        "BillNumber": "", 
+        "RowIndex": 0,
+        "BusinessId": "",
+        "OutBillNumberId": "",
+        "GraspBillNumberId": ""
+      },
+      "PaymentWayName": "人民币"
+    }
+  ],
+  "MemberPersonName": "",
+  "CreatorUserName": "#UserName#"
+}
+[2019-11-12 18:11:11,587]-[INFO]-[日志信息]:---=正在执行CheckOut模块第6条测试用例:上传结账单，无促销使用现金支付----
+[2019-11-12 18:11:11,589]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Checkout/PostBill，Params：{
+  "BillNumber": "201911120000000001",
+  "BillType": 1,
+  "ClientPosBindId": "643754668198985728",
+  "MemberUserId": 0,
+  "ClientShiftKey": "25798",
+  "CreationTime": "2019-11-12T06:22:39.435Z",
+  "CreatorUserId": 0,
+  "OriginalTotal": 100,
+  "DiscountTotal": 20,
+  "FinalTotal": 80,
+  "Remark": "使用现金，整单折扣20%",
+  "OriginalBillNumber": "",
+  "ClientBillOrderDetailList": [
+    {
+      "BillNumber": "201911120000000001",
+      "RowIndex": 1,
+      "ProductStandardId": "642203166703616000",
+      "BusinessManId": "2",
+      "IsGift": false,
+      "ServerPrice": 50,
+      "Qty": 2,
+      "BackQty": 0,
+      "OriginalTotal": 100,
+      "DiscountTotal": 20,
+      "FinalTotal": 80
+    }
+  ],
+  "ClientBillPayDetailList": [
+    {
+      "BillNumber": "201911120000000001",
+      "RowIndex": 1,
+      "PaymentWayId": "641895076527603717",
+      "Amount": 80,
+      "ProjectPayLog": {
+        "BillNumber": "",
+        "RowIndex": 0,
+        "ProjectMasterId": 0,
+        "ProjectMasterName": ""
+      },
+      "MemberCardPayLog": {
+        "BillNumber": "",
+        "RowIndex": 0,
+        "MemberPayId": 0
+      },
+      "GraspPayLog": {
+        "BillNumber": "", 
+        "RowIndex": 0,
+        "BusinessId": "",
+        "OutBillNumberId": "",
+        "GraspBillNumberId": ""
+      },
+      "PaymentWayName": "人民币"
+    }
+  ],
+  "MemberPersonName": "",
+  "CreatorUserName": "ly"
+}
+&lt;class 'requests.models.Response'&gt;
+&lt;Response [500]&gt;
+{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"An error occurred while updating the entries. See the inner exception for details.","Details":"DbUpdateException: An error occurred while updating the entries. See the inner exception for details.\r\nSTACK TRACE:    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)\r\n   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken)\r\n   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken)\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext)\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync()\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.CompleteUowAsync()\r\n   at Abp.Domain.Uow.UnitOfWorkBase.CompleteAsync()\r\n   at Abp.AspNetCore.Mvc.Uow.AbpUowActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\nMySqlException: Duplicate entry '643754687647973376' for key 'PRIMARY'\r\nSTACK TRACE:    at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 81\r\n   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 307\r\n   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 292\r\n   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\TextCommandExecutor.cs:line 37\r\n   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\nMySqlException: Duplicate entry '643754687647973376' for key 'PRIMARY'\r\nSTACK TRACE:    at MySqlConnector.Core.ServerSession.TryAsyncContinuation(Task`1 task) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\ServerSession.cs:line 1252\r\n   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task&amp; currentTaskSlot)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\ResultSet.cs:line 43\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-12 18:11:13,051]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"An error occurred while updating the entries. See the inner exception for details.","Details":"DbUpdateException: An error occurred while updating the entries. See the inner exception for details.\r\nSTACK TRACE:    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)\r\n   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken)\r\n   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken)\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext)\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync()\r\n   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.CompleteUowAsync()\r\n   at Abp.Domain.Uow.UnitOfWorkBase.CompleteAsync()\r\n   at Abp.AspNetCore.Mvc.Uow.AbpUowActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\nMySqlException: Duplicate entry '643754687647973376' for key 'PRIMARY'\r\nSTACK TRACE:    at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 81\r\n   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 307\r\n   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\MySql.Data.MySqlClient\\MySqlDataReader.cs:line 292\r\n   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\TextCommandExecutor.cs:line 37\r\n   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\nMySqlException: Duplicate entry '643754687647973376' for key 'PRIMARY'\r\nSTACK TRACE:    at MySqlConnector.Core.ServerSession.TryAsyncContinuation(Task`1 task) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\ServerSession.cs:line 1252\r\n   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task&amp; currentTaskSlot)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\\projects\\mysqlconnector\\src\\MySqlConnector\\Core\\ResultSet.cs:line 43\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-12 18:11:13,054]-[ERROR]-[日志信息]:ERROR：An error occurred while updating the entries. See the inner exception for details.
+[2019-11-12 18:11:13,057]-[ERROR]-[日志信息]:用例执行失败：{'Success': True} != {'Success': False}
+- {'Success': True}
+?             ^^^
+
++ {'Success': False}
+?             ^^^^
+
+Traceback (most recent call last):
+  File "F:\AutoTest\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\AutoTest\PosApi\kx_api\test_cases\test_checkout.py", line 85, in test_checkOut
+    raise e
+  File "F:\AutoTest\PosApi\kx_api\test_cases\test_checkout.py", line 78, in test_checkOut
+    self.assertEqual(eval(case['ExpectedResult']),ActualResult)
+AssertionError: {'Success': True} != {'Success': False}
+- {'Success': True}
+?             ^^^
+
++ {'Success': False}
+?             ^^^^
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>12</td>
+    <td>11</td>
+    <td>1</td>
+    <td>0</td>
+    <td>通过率：91.67%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>

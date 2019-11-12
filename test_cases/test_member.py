@@ -26,15 +26,12 @@ class TestCases(unittest.TestCase):
     def tearDown(self):
         pass
 
-    print(test_data)
     @data(*test_data)
     def test_auth(self,case):
         global test_result
         method = case['Method']
         url = case['url']
-        # params = eval(case['Params'])
         #替换测试用例中的params的参数
-        # params = eval(re_replace(case['Params']))
         if case['Params'] == None:
             params = case['Params']
         elif case['Method'].upper() =='POST':
@@ -83,7 +80,7 @@ class TestCases(unittest.TestCase):
         if case['url'].find('MemberPay') !=-1:
             setattr(Reflex, 'MemberPayId', str(resp.json()['Result']['MemberPayId']))
         try:
-            #----------使用什么来断言，还有待考虑参考yapi上的接口返回来做demo-------
+            #----------待优化-------
             ActualResult={}
             if case['Module'] == 'web':
                 ActualResult['success'] = resp.json()['success']

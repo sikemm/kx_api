@@ -7,7 +7,7 @@ from kx_api.common import file_path
 from kx_api.common.http_request import HttpRequest
 from kx_api.common.my_log import MyLog
 from kx_api.common.reflex import Reflex
-from kx_api.common.re_replace import re_replace
+from kx_api.common.re_replace import re_replace,findId
 
 #该模块是用来执行auth表单的测试用例,版本检测、绑定.基础信息获取接口，登录操作
 
@@ -33,13 +33,9 @@ class TestCases(unittest.TestCase):
         #替换测试用例中的params的参数,参数为空时不需要替换
         if case['Params'] == None:
             params = case['Params']
-        elif case['Module'] == 'web':
+        elif case['Method'].upper() == 'POST':
             params = re_replace(case['Params'])
-        elif case['Module'] =='Auth':
-            params = re_replace(case['Params'])
-        elif case['Module'] =='TokenAuth':
-            params = re_replace(case['Params'])
-        else:
+        elif case['Method'].upper() == 'GET':
             params = eval(re_replace(case['Params']))
 
         MyLog().info('---=正在执行{0}模块第{1}条测试用例:{2}----'.format(case['Module'],case['CaseId'],case['Title']))
@@ -54,6 +50,38 @@ class TestCases(unittest.TestCase):
             setattr(Reflex, 'PosId', resp.json()['result']['id'])
         elif resp.text.find('PosId') !=-1:
             setattr(Reflex, 'ClientPosBindId', str(resp.json()['Result']['Id']))
+        #绑定成功后，获取基础信息中的某些参数，用于后续接口使用
+
+        #获取商品分类主键,取返回后的第一个列表中的数据
+        if url.find('GetBaseProductCategoryList') !=-1:
+            setattr(Reflex,'BaseProductCategoryId',str(resp.json()['Result'][0]['Id']))
+        # 获取商品主键,根据以获取的商品分类去找商品
+        if url.find('GetBaseProductList') !=-1:
+            i= findId(resp.json()['Result'],'ProductCategoryId',int(getattr(Reflex,'BaseProductCategoryId')))
+            setattr(Reflex,'ProductId',str(i['Id']))
+        #获取商品规格主键，根据获取的商品主键去找规格id
+        if url.find('GetBaseProductStandardList') !=-1:
+            i= findId(resp.json()['Result'],'ProductId',int(getattr(Reflex,'ProductId')))
+            setattr(Reflex,'ProductStandardId',str(i['Id']))
+
+        print(getattr(Reflex,'BaseProductCategoryId'))
+        print(getattr(Reflex, 'ProductId'))
+        print(getattr(Reflex, 'ProductStandardId'))
+        #获取结账方式主键
+        if url.find('GetBasePaymentWayList') !=-1:
+            RMB= findId(resp.json()['Result'],'Code','00001')['Id']
+            setattr(Reflex,'RMBId',str(RMB))
+            MemberCardPayId = findId(resp.json()['Result'], 'Code', '00003')['Id']
+            setattr(Reflex, 'MemberCardPayId', str(MemberCardPayId))
+            GraspPayId = findId(resp.json()['Result'], 'Code', '00002')['Id']
+            setattr(Reflex, 'GraspPayId', str(GraspPayId))
+
+        #获取用户信息，取返回的第一个数据
+        if url.find('GetUserList') !=-1:
+            UserId = findId(resp.json()['Result'], 'UserName',getattr(Reflex,'UserName') )['Id']
+            setattr(Reflex, 'UserId', str(UserId))
+
+        #营销方案数据待增加
 
         # web登录成功后，返回的body里面带有token信息，需要将token信息放在header里面一起请求
         if resp.text.find('accessToken') != -1:
@@ -68,7 +96,7 @@ class TestCases(unittest.TestCase):
             header['Authorization'] = 'Bearer ' + AccessToken
             setattr(Reflex, 'header', header)
         try:
-            #----------使用什么来断言，还有待考虑参考yapi上的接口返回来做demo-------
+            #----------待优化-------
             ActualResult={}
             if case['Module'] == 'web':
                 ActualResult['success'] = resp.json()['success']
