@@ -22,8 +22,6 @@ class TestCases(unittest.TestCase):
     def setUp(self):
         '''每次用例开始执行前，创建一个读写excel的对象'''
         self.f = DoExcel(file_name)
-        # PersonName = str(chr(random.randint(0x4e00, 0x9fbf)))
-        # setattr(Reflex,'PersonName',PersonName)
 
     def tearDown(self):
         pass
@@ -86,10 +84,7 @@ class TestCases(unittest.TestCase):
         try:
             #----------待优化-------
             ActualResult={}
-            if case['Module'] == 'web':
-                ActualResult['success'] = resp.json()['success']
-            else:
-                ActualResult['Success'] = resp.json()['Success']
+            ActualResult['Success'] = resp.json()['Success']
             self.assertEqual(eval(case['ExpectedResult']),ActualResult)
             test_result = 'pass'
         except AssertionError as e:

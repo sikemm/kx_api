@@ -87,11 +87,7 @@ class TestCases(unittest.TestCase):
         try:
             #----------待优化-------
             ActualResult={}
-            if case['Module'] == 'web':
-                ActualResult['success'] = resp.json()['success']
-            else:
-                ActualResult['Success'] = resp.json()['Success']
-
+            ActualResult['Success'] = resp.json()['Success']
             self.assertEqual(eval(case['ExpectedResult']),ActualResult)
             test_result = 'pass'
         except AssertionError as e:
