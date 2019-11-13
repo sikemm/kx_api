@@ -8,11 +8,11 @@ from kx_api.common.http_request import HttpRequest
 from kx_api.common.my_log import MyLog
 from kx_api.common.reflex import Reflex
 from kx_api.common.re_replace import re_replace
-
+import random
 #该模块是用来执行Member表单的测试用例,新增会员，修改会员，停启用，会员支付等接口
 
 file_name = file_path.api_case_path
-sheet_name = 'Member'
+sheet_name = 'BMember'
 test_data = DoExcel(file_name).read_data(sheet_name)
 
 print(test_data)
@@ -22,12 +22,14 @@ class TestCases(unittest.TestCase):
     def setUp(self):
         '''每次用例开始执行前，创建一个读写excel的对象'''
         self.f = DoExcel(file_name)
+        # PersonName = str(chr(random.randint(0x4e00, 0x9fbf)))
+        # setattr(Reflex,'PersonName',PersonName)
 
     def tearDown(self):
         pass
 
     @data(*test_data)
-    def test_auth(self,case):
+    def test_bmember(self,case):
         global test_result
         method = case['Method']
         url = case['url']
@@ -73,9 +75,11 @@ class TestCases(unittest.TestCase):
         if case['url'].find('CreateMemberInfo') !=-1:
             setattr(Reflex,'MemberPersonId',str(resp.json()['Result']['Id']))
             setattr(Reflex,'MemberUserId',str(resp.json()['Result']['MemberUser']['Id']))
+            setattr(Reflex, 'MemberPersonName', str(resp.json()['Result']['PersonName']))
             # 新增会员后，操作会员电话号码加1写入表格，便于下次使用
             tel = str(int(case['Params']['PersonPhone']) + 1)
             self.f.write_data(2, 1, tel, 'PersonPhone')
+
         #会员支付成功后，获取支付id
         if case['url'].find('MemberPay') !=-1:
             setattr(Reflex, 'MemberPayId', str(resp.json()['Result']['MemberPayId']))

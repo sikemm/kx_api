@@ -40,11 +40,10 @@ class DoExcel:
                 row_data['Params'] = sheet.cell(i, 6).value
             row_data['sql'] = sheet.cell(i,7).value
             row_data['ExpectedResult'] = sheet.cell(i, 8).value
-            # row_data['ActualResult'] = sheet.cell(i, 9).value
             test_data.append(row_data)
         wb.close()
         finall_data = []
-        #为all就返回读取到的所有用例数据，否则就返回需要的用例数据
+        #为all就返回读取到的所有用例数据，否则就返回需要的用例数据,配置文件的section就是表单名
         CaseId = MyConfig().get_string(sheet_name, 'CaseId')
         if CaseId == 'all':
             finall_data = test_data
@@ -73,4 +72,4 @@ class DoExcel:
 if __name__ == '__main__':
     p = DoExcel(r'F:\AutoTest\PosApi\kx_api\test_cases\api_case.xlsx')
     # data = p.write_data(2,8,'11111','BaseInfo')
-    print(p.read_data('Member'))
+    p.write_data(2,1,'201911130000000004','billNumber')

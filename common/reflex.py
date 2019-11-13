@@ -36,8 +36,9 @@ class Reflex:
     #版本号信息
     CurrentVersion = MyConfig().get_string('CurrentVersion','CurrentVersion')  #最新的版本号
     #===================会员模块所需参数===================
-    #会员办卡,客户名称、编码、电话号码随机生成5位
+    #会员办卡,客户名称、编码、电话号码随机生成5位，也用于新增商品时的商品名称，商品code
     PersonName = str(chr(random.randint(0x4e00, 0x9fbf)))
+    # PersonName = None
     PersonCode = str(random.randint(0x4e00, 0x9fbf))
 
     #pos端会员办卡时需要的办卡时间，会员卡类型，等级
@@ -48,25 +49,34 @@ class Reflex:
     #客户id，会员id
     MemberPersonId = None
     MemberUserId = None
+    MemberPersonName = None
     MemberPayId = None
 
     #===========上传账单模块所需的参数=======
     #账单号：读取excel里面的订单号
-    BillNumber = DoExcel(file_path.api_case_path).read_tel('billNumber')
+    # BillNumber = DoExcel(file_path.api_case_path).read_tel('billNumber')
+    BillNumber = None
     #源单单号
-    OriginalBillNumber = BillNumber
+    OriginalBillNumber = None
+    # OriginalBillNumber = str(int(BillNumber)-1)
     #退单单号
-    TbillNumber = str(int(BillNumber) + 1)
+    # TbillNumber = str(int(BillNumber) + 1)
     #商品分类主键
     BaseProductCategoryId = None
     #获取商品id
     ProductId = None
     #商品规格主键,获取基础信息时赋值
     ProductStandardId = None
+
     #结账方式主键,人名币，会员卡，任我行
     RMBId = None
     MemberCardPayId = None
     GraspPayId = None
+
+    #任我行支付成功后，返回的数据,商户号，支付通返回的单号
+    BusinessId = None
+    GraspBillNumberId = None
+
     # 用户登陆信息pos端登录时的用户名和密码
     UserId = None
     UserName = 'ly'
@@ -74,10 +84,9 @@ class Reflex:
 
     #创建商品所需要的条形码
     BarCode= chr(random.randint(0x4e00, 0x9fbf))
-    #用户班次号随机生成一个数字,每次交班后重新生成
-    ShiftKey = str(random.randint(1,99999))
-    #本次用户未交班前使用的班次号
-    ThisShiftKey = None
+    #用户班次号excel维护，每次交班后加1
+    ShiftKey = None
+
 
 if __name__ == '__main__':
 

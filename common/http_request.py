@@ -25,7 +25,7 @@ class HttpRequest:
 
         elif method.upper() == 'DELETE':
             try:
-                resp = requests.delete(url, data=params, headers=header)
+                resp = requests.delete(url, data = params, headers=header)
             except Exception as e:
                 resp = 'delete请求出错了:{}'.format(e)
 

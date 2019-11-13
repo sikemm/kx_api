@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>20191113-快消接口测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 120%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">20191113-快消接口测试报告</h1>
+<p class='attribute'><strong>测试人员 : </strong> liuyan</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-11-13 17:27:01</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:10.686025</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 13，通过 8，失败 1，错误 4，通过率= 61.54%</p>
+
+<p class='description'>基础信息，账单，绑定接口</p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 61.54% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 8 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 13 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 16px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>kx_api.test_cases.test_auth.TestCases: 该类主要是用来写测试用例</td>
+    <td class="text-center">11</td>
+    <td class="text-center">6</td>
+    <td class="text-center">1</td>
+    <td class="text-center">4</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',11)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align="left">
+    <pre>
+    
+pt1_1: [2019-11-13 17:27:01,214]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:登录web端----
+[2019-11-13 17:27:01,217]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/TokenAuth/Authenticate，Params：{
+  "tenancyName": "default",
+  "userNameOrEmailAddress": "admin",
+  "password": "admin"
+}
+[2019-11-13 17:27:01,298]-[INFO]-[日志信息]:ActualResult：{"result":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6ImU1MTE5NDNlLWY5OTUtZjk5NS0yMmJmLTM5ZjE3NjM3MWQ3MSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjEiLCJqdGkiOiJkM2IyNzVhYy00ODQzLTRjZmItODVhYi0xOWY3ZTkwNjk0MGYiLCJpYXQiOjE1NzM2MzcyMjcsIkp3dFdlYlVuaXF1ZUlkIjoiYjk3ZTk3NGMtMjliNC00ODZmLTllYTEtOTViMmRhMDYyMzViIiwiSnd0V2ViVGVuYW50SWQiOiIxIiwibmJmIjoxNTczNjM3MjI3LCJleHAiOjE1NzM3MjM2MjcsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.zuzmcl5c5mrZDgDAAaq6pxsL22jg3tmfMGeUfUL8F_A","encryptedAccessToken":"wNYmO41/48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA/QhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi/FyB6axBY+6gq1GL+uRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U+og9pkHw9/QR4Nl/DPnoP9JYDMpZ1zxx09u6s0GZ9/Q5Sjk+L0UfcSCbl38X8he5w9UIn/Hvxh7ysM1CiPLsoOwtbiieSRVmrmt0JjnipAn4/K283F8GrGwzwgehWsqefmUnM0ckMwP9ZAdwQxWDhxv0IqNw4tDhwUYs/1SYdYozdNzgByhgNOBPzQDObNLlWc4vV5VMOiYHBOMNLV6WmJ4h3l9zRRXmjfn2He226iurtcv029//9vcQ4k+7iEv464BkdzAxdfTKUBj2kJ1gjYDtrLg/qWyRu/9fno69wGq1hJoj60As3lu8n0RUfOXz6E0ZVc53G4obkLrkeXDLSlFSlhRcmETzbW0oio12RjVwvy4O3qUO4Ed8buEQPjpy7bjikSh3Rv7dpDWsFAt4pjnuZU9X/H7hBVYoEkqkliRv3lQWxVzKJuVQUgBS4pW3IitFjSCO3aKkVBVvNoEdfjKgmn7q/dvJPbA6CwqFbzAKhwz4rxSxlo5AqlLhaOofxKiMf+CGXMnLum91GGvOGJ7D7065o/1AEPWu7mZPK9HS02mEh/jFJXtgigXCyg1brLD8fjpNuIJtd/b2OlDPHIebmLxkyjDKTkTL0Y+Q+k/8JuRU8n9ig1Fkw8oLkYVICWbucl4b2MoSC+1du1EsRqBcHROPH2Hvg0meX3xfL2VRRSgzSfkU6WY+DH9obBO7BXltLeQ7hk96hHYmKGu6iH13zKBGruqhPkPtfQEsGJLBJv3CJWLlhumIBrOum4kAd0W79AJ3jB/ZzhJdmWIGS1dd8C4I+Ed0JqOv3GnFjiESa3Yml5cqlSmW2TMQue733q8wBgGCKhgTr5MBwaWH4eB/rvxmsQZpTCLgpBZ91zZoPtFMXUF8WRCjy29Qlaac5SVUMfgnCwzKM9t8rEFN8XYztd5n0+0b66los7JJbUfFT8Huyu4eQdKWa+lVGg3EaewMIJsu4pA=","expireInSeconds":86400,"userId":1},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align="left">
+    <pre>
+    
+pt1_2: [2019-11-13 17:27:02,378]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:新建店铺----
+[2019-11-13 17:27:02,380]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Create，Params：{ 
+ "id":"",
+ "sort":"",
+ "tenantId":"1",
+ "isActive":true,
+ "code":"CD",
+ "name":"红旗连锁",
+ "pyCode":"HQLS",
+ "businessType":1,
+ "businessTypeName":"直营",
+ "province":"四川省",
+ "city":"成都市",
+ "zone":"武侯区",
+ "street":"武侯大道888号",
+ "openTime":"08:00",
+ "closeTime":"22:00",
+ "address":"新希望大厦B座",
+ "storePhone":"15222222222",
+ "longitude":"经度",
+ "latitude":"纬度"
+ 
+}
+[2019-11-13 17:27:02,416]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644105963879530496","sort":"644105963879530496","isActive":true,"code":"CD","name":"红旗连锁","pyCode":"HQLS","businessType":1,"businessTypeName":"直营","province":"四川省","city":"成都市","zone":"武侯区","street":"武侯大道888号","address":"新希望大厦B座","openTime":"08:00","closeTime":"22:00","storePhone":"15222222222","longitude":"经度","latitude":"纬度","imageUrls":[]},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" align="left">
+    <pre>
+    
+pt1_3: [2019-11-13 17:27:03,523]-[INFO]-[日志信息]:---=正在执行web模块第3条测试用例:新增pos档案----
+[2019-11-13 17:27:03,525]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Create，Params：{
+  "id": "",
+  "sort": "",
+  "isActive": true,
+  "storeId": "644105963879530496",
+  "code": "1",
+  "name": "1",
+  "pyCode": "1",
+  "communicationPassword": "123456",
+  "machineName": "",
+  "storeIdName": "红旗连锁",
+  "storeCode": "CD"
+}
+[2019-11-13 17:27:03,561]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644105968711368704","sort":"644105968711368704","isActive":true,"storeId":"644105963879530496","code":"1","name":"1","pyCode":"1","communicationPassword":"123456","machineName":"","storeIdName":"红旗连锁","storeCode":"CD"},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" align="left">
+    <pre>
+    
+pt1_4: [2019-11-13 17:27:04,665]-[INFO]-[日志信息]:---=正在执行Auth模块第13条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-13 17:27:04,667]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-13 17:27:04,699]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":644105973484486656,"TenantId":1,"StoreId":644105963879530496,"PosId":644105968711368704,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-13T17:27:10.9914235+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft1_5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_auth_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_5'>错误</button>
+    <div id='div_ft1_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_5'>错误</button>
+    <div id='div_ft1_5' class="collapse in" align="left">
+    <pre>
+    
+ft1_5: [2019-11-13 17:27:05,820]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第15条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-13 17:27:05,823]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBindId': '644105973484486656', 'StoreId': '644105963879530496', 'PosId': '644105968711368704', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-13 17:27:05,889]-[INFO]-[日志信息]:ActualResult：{"Result":[],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+Traceback (most recent call last):
+  File "F:\AutoTest\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\AutoTest\PosApi\kx_api\test_cases\test_auth.py", line 57, in test_auth
+    setattr(Reflex,'BaseProductCategoryId',str(resp.json()['Result'][0]['Id']))
+IndexError: list index out of range
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft1_6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_auth_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_6'>错误</button>
+    <div id='div_ft1_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_6'>错误</button>
+    <div id='div_ft1_6' class="collapse in" align="left">
+    <pre>
+    
+ft1_6: [2019-11-13 17:27:05,893]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第21条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-13 17:27:05,895]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBindId': '644105973484486656', 'StoreId': '644105963879530496', 'PosId': '644105968711368704', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-13 17:27:05,959]-[INFO]-[日志信息]:ActualResult：{"Result":[],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+Traceback (most recent call last):
+  File "F:\AutoTest\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\AutoTest\PosApi\kx_api\test_cases\test_auth.py", line 60, in test_auth
+    i= findId(resp.json()['Result'],'ProductCategoryId',int(getattr(Reflex,'BaseProductCategoryId')))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft1_7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_auth_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_7'>错误</button>
+    <div id='div_ft1_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_7'>错误</button>
+    <div id='div_ft1_7' class="collapse in" align="left">
+    <pre>
+    
+ft1_7: [2019-11-13 17:27:05,962]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第27条测试用例:已绑定的店铺且所有参数正确，获取商品规格数据成功----
+[2019-11-13 17:27:05,964]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardList，Params：{'TenantId': '1', 'ClientPosBindId': '644105973484486656', 'StoreId': '644105963879530496', 'PosId': '644105968711368704', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-13 17:27:06,047]-[INFO]-[日志信息]:ActualResult：{"Result":[],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+Traceback (most recent call last):
+  File "F:\AutoTest\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\AutoTest\PosApi\kx_api\test_cases\test_auth.py", line 64, in test_auth
+    i= findId(resp.json()['Result'],'ProductId',int(getattr(Reflex,'ProductId')))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse in" align="left">
+    <pre>
+    
+pt1_8: [2019-11-13 17:27:06,050]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第33条测试用例:已绑定的店铺且所有参数正确，获取商品规格条形码数据成功----
+[2019-11-13 17:27:06,052]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardBarCodeList，Params：{'TenantId': '1', 'ClientPosBindId': '644105973484486656', 'StoreId': '644105963879530496', 'PosId': '644105968711368704', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-13 17:27:06,125]-[INFO]-[日志信息]:ActualResult：{"Result":[],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_auth_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse in" align="left">
+    <pre>
+    
+pt1_9: [2019-11-13 17:27:07,242]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第39条测试用例:已绑定的店铺且入参正确，获取结账方式成功----
+[2019-11-13 17:27:07,244]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBasePaymentWayList，Params：{'TenantId': '1', 'ClientPosBindId': '644105973484486656', 'StoreId': '644105963879530496', 'PosId': '644105968711368704', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-13 17:27:07,273]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644102593789820928,"Sort":644102593789820928,"Code":"YH001","Name":"抹零","PyCode":"ML","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820929,"Sort":644102593789820929,"Code":"YH002","Name":"优惠","PyCode":"YH","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820930,"Sort":644102593789820930,"Code":"YH003","Name":"赠送","PyCode":"ZS","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820931,"Sort":644102593789820931,"Code":"YH004","Name":"优惠券","PyCode":"YHQ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820932,"Sort":644102593789820932,"Code":"YH005","Name":"免单","PyCode":"MD","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820933,"Sort":644102593789820933,"Code":"00001","Name":"人民币","PyCode":"RMB","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820934,"Sort":644102593789820934,"Code":"00002","Name":"任我行支付","PyCode":"RWXZF","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820935,"Sort":644102593789820935,"Code":"00003","Name":"会员卡储值","PyCode":"HYKCZ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft1_10' class='none'>
+    <td class='errorCase'><div class='testcase'>test_auth_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_10'>错误</button>
+    <div id='div_ft1_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_10'>错误</button>
+    <div id='div_ft1_10' class="collapse in" align="left">
+    <pre>
+    
+ft1_10: [2019-11-13 17:27:08,374]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第45条测试用例:已绑定的店铺且入参正确，获取用户数据成功----
+[2019-11-13 17:27:08,377]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetUserList，Params：{'TenantId': '1', 'ClientPosBindId': '644105973484486656', 'StoreId': '644105963879530496', 'PosId': '644105968711368704', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-13 17:27:08,443]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":1,"UserName":"admin","PosClientSalt":"fadf4e02-1c7c-49dd-bef0-9f0a201e7222","PosClientPassword":"3E337B184C41365203FC721F1C8E0C113A0BB37E","Permission":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+Traceback (most recent call last):
+  File "F:\AutoTest\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\AutoTest\PosApi\kx_api\test_cases\test_auth.py", line 81, in test_auth
+    UserId = findId(resp.json()['Result'], 'UserName',getattr(Reflex,'UserName') )['Id']
+TypeError: 'NoneType' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft1_11' class='none'>
+    <td class='failCase'><div class='testcase'>test_auth_11</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_11'>失败</button>
+    <div id='div_ft1_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_11'>失败</button>
+    <div id='div_ft1_11' class="collapse in" align="left">
+    <pre>
+    
+ft1_11: [2019-11-13 17:27:08,455]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第93条测试用例:登录pos端----
+[2019-11-13 17:27:08,457]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "644105973484486656",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-13 17:27:08,499]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"登录失败，请查看登录信息是否正确！","Details":"UserFriendlyException: 登录失败，请查看登录信息是否正确！\r\nSTACK TRACE:    at GraspSaas.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in E:\\Worked\\@GraspShop\\GraspPosShop.Api\\src\\GraspSaas.PosApi.Core\\Controllers\\TokenAuthController.cs:line 279\r\n   at GraspSaas.Controllers.TokenAuthController.Authenticate(AuthenticateInput input) in E:\\Worked\\@GraspShop\\GraspPosShop.Api\\src\\GraspSaas.PosApi.Core\\Controllers\\TokenAuthController.cs:line 82\r\n   at lambda_method(Closure , Object )\r\n   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+None
+None
+None
+[2019-11-13 17:27:08,502]-[ERROR]-[日志信息]:ERROR：登录失败，请查看登录信息是否正确！
+[2019-11-13 17:27:08,504]-[ERROR]-[日志信息]:用例执行失败：{'Success': True} != {'Success': False}
+- {'Success': True}
+?             ^^^
+
++ {'Success': False}
+?             ^^^^
+
+Traceback (most recent call last):
+  File "F:\AutoTest\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\AutoTest\PosApi\kx_api\test_cases\test_auth.py", line 112, in test_auth
+    raise e
+  File "F:\AutoTest\PosApi\kx_api\test_cases\test_auth.py", line 105, in test_auth
+    self.assertEqual(eval(case['ExpectedResult']),ActualResult)
+AssertionError: {'Success': True} != {'Success': False}
+- {'Success': True}
+?             ^^^
+
++ {'Success': False}
+?             ^^^^
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>kx_api.test_cases.test_del.TestCases: 该类主要是用来写测试用例</td>
+    <td class="text-center">2</td>
+    <td class="text-center">2</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',2)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_del_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in" align="left">
+    <pre>
+    
+pt2_1: &lt;class 'dict'&gt;
+{'id': '644105968711368704'}
+[2019-11-13 17:27:09,590]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:删除新增的pos档案----
+[2019-11-13 17:27:09,592]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Delete，Params：{'id': '644105968711368704'}
+&lt;class 'requests.models.Response'&gt;
+&lt;Response [200]&gt;
+{"result":null,"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-13 17:27:09,657]-[INFO]-[日志信息]:ActualResult：{"result":null,"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_del_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align="left">
+    <pre>
+    
+pt2_2: &lt;class 'dict'&gt;
+{'id': '644105963879530496'}
+[2019-11-13 17:27:10,747]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:删除新增的店铺信息----
+[2019-11-13 17:27:10,749]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Delete，Params：{'id': '644105963879530496'}
+&lt;class 'requests.models.Response'&gt;
+&lt;Response [200]&gt;
+{"result":null,"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-13 17:27:10,813]-[INFO]-[日志信息]:ActualResult：{"result":null,"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>13</td>
+    <td>8</td>
+    <td>1</td>
+    <td>4</td>
+    <td>通过率：61.54%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>

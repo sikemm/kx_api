@@ -19,11 +19,24 @@ test_data = DoExcel(file_name).read_data(sheet_name)
 class TestCases(unittest.TestCase):
     '''该类主要是用来写测试用例'''
     def setUp(self):
-        '''每次用例开始执行前，创建一个读写excel的对象'''
+        '''每次用例开始执行前，创建一个读写excel的对象，读取出上传账单所需要的账单，班次号信息'''
         self.f = DoExcel(file_name)
+        #获取账单编号，源单号
+        BillNumber = self.f.read_tel('billNumber')
+        OriginalBillNumber = str(int(BillNumber) - 1)
+        setattr(Reflex,'BillNumber',BillNumber)
+        setattr(Reflex, 'OriginalBillNumber', OriginalBillNumber)
+        #获取班次号
+        ShiftKey = self.f.read_tel('ShiftKey')
+        setattr(Reflex,'ShiftKey',ShiftKey)
+        #获取商品条码
+        BarCode = self.f.read_tel('BarCode')
+        setattr(Reflex, 'BarCode', BarCode)
+
 
     def tearDown(self):
-        pass
+        billnumber = str(int(getattr(Reflex, 'BillNumber')) + 1)
+        self.f.write_data(2, 1, billnumber, 'billNumber')
 
     @data(*test_data)
     def test_checkOut(self,case):
@@ -36,8 +49,11 @@ class TestCases(unittest.TestCase):
             params = case['Params']
         elif case['Method'].upper() == 'GET':
             params = eval(re_replace(case['Params']))
+        elif case['Method'].upper() == 'DELETE':
+            params = eval(re_replace(case['Params']))
         elif case['Method'].upper() == 'POST':
             params = re_replace(case['Params'])
+
         MyLog().info('---=正在执行{0}模块第{1}条测试用例:{2}----'.format(case['Module'],case['CaseId'],case['Title']))
         MyLog().info('URL：{0}，Params：{1}'.format(case['url'],params))
         #发起请求
@@ -46,31 +62,32 @@ class TestCases(unittest.TestCase):
         print(resp)
         print(resp.text)
         MyLog().info('ActualResult：{}'.format(resp.text))
-        # 绑定成功后，获取服务器返回的店铺storeid等,posid,绑定posid，注意str的使用，设置时，只能是字符串
-        if resp.text.find('businessType') != -1:
-            setattr(Reflex, 'StoreId', resp.json()['result']['id'])
-        elif resp.text.find('communicationPassword') != -1:
-            setattr(Reflex, 'PosId', resp.json()['result']['id'])
-        elif resp.text.find('PosId') != -1:
-            setattr(Reflex, 'ClientPosBindId', str(resp.json()['Result']['Id']))
 
-        # web登录成功后，返回的body里面带有token信息，需要将token信息放在header里面一起请求
-        if resp.text.find('accessToken') != -1:
-            header = getattr(Reflex, 'header')
-            AccessToken = resp.json()['result']['accessToken']
-            header['Authorization'] = 'Bearer ' + AccessToken
-            setattr(Reflex, 'header', header)
-        # pos端登陆成功之后，获取服务器返回的token信息
-        elif resp.text.find('AccessToken') != -1:
+        # 会员支付成功后，获取支付id
+        if case['url'].find('MemberPay') != -1:
+            setattr(Reflex, 'MemberPayId', str(resp.json()['Result']['MemberPayId']))
+
+        #交班之后，重新登陆，重新获取token
+        if resp.text.find('AccessToken') != -1:
             header = getattr(Reflex, 'header')
             AccessToken = resp.json()['Result']['AccessToken']
             header['Authorization'] = 'Bearer ' + AccessToken
             setattr(Reflex, 'header', header)
 
+        #执行了交班，表格里面的班次号+1
+        if url.find('PostShift') !=-1:
+            ShiftKeyNew = str(int(getattr(Reflex,'ShiftKey'))+1)
+            self.f.write_data(2,1,ShiftKeyNew,'ShiftKey')
+
+        #执行了创建商品后，商品条码+1
+        if url.find('CreateBaseProduct') !=-1:
+            BarCodeNew = str(int(getattr(Reflex,'BarCode'))+1)
+            self.f.write_data(2,1,BarCodeNew,'BarCode')
+
         try:
             #----------待优化-------
             ActualResult={}
-            if case['Method'] == 'web':
+            if case['Module'] == 'web':
                 ActualResult['success'] = resp.json()['success']
             else:
                 ActualResult['Success'] = resp.json()['Success']
@@ -86,5 +103,6 @@ class TestCases(unittest.TestCase):
         finally:
             self.f.write_data(case['CaseId']+1,9,resp.text,sheet_name)
             self.f.write_data(case['CaseId']+1,10,test_result,sheet_name)
+
 
 
