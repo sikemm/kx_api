@@ -4,6 +4,7 @@
 # 执行用例，出具测试报告
 import sys
 sys.path.append('./')   #jenkin集成的时候，可能需要加的系统路径
+print(sys.path)
 import unittest
 from kx_api.common import file_path
 import HTMLTestRunnerNew
