@@ -1,9 +1,9 @@
-#__coding__:'utf-8'
+﻿#__coding__:'utf-8'
 #auther:ly
 
 # 执行用例，出具测试报告
-# import sys
-# sys.path.append('./')  jenkin集成的时候，可能需要加的系统路径
+import sys
+sys.path.append('./')   #jenkin集成的时候，可能需要加的系统路径
 import unittest
 from kx_api.common import file_path
 import HTMLTestRunnerNew
