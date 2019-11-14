@@ -1,7 +1,7 @@
 #__coding__:'utf-8'
 #auther:ly
 import unittest
-from ddt import ddt,data,unpack
+from ddt import ddt,data
 from kx_api.common.do_excel import DoExcel
 from kx_api.common import file_path
 from kx_api.common.http_request import HttpRequest
@@ -17,7 +17,7 @@ test_data = DoExcel(file_name).read_data(sheet_name)
 
 @ddt
 class TestCases(unittest.TestCase):
-    '''该类主要是用来写测试用例'''
+    '''该类是完成账单和交班模块测试用例'''
     def setUp(self):
         '''每次用例开始执行前，创建一个读写excel的对象，读取出上传账单所需要的账单，班次号信息'''
         self.f = DoExcel(file_name)
@@ -25,10 +25,13 @@ class TestCases(unittest.TestCase):
         BillNumber = self.f.read_tel('billNumber')
         OriginalBillNumber = str(int(BillNumber) - 1)
         setattr(Reflex,'BillNumber',BillNumber)
+        setattr(Reflex, 'GraspBillNumberId', BillNumber)
         setattr(Reflex, 'OriginalBillNumber', OriginalBillNumber)
         #获取班次号
         ShiftKey = self.f.read_tel('ShiftKey')
+        LastShiftKey = str(int(ShiftKey)-1)
         setattr(Reflex,'ShiftKey',ShiftKey)
+        setattr(Reflex,'LastShiftKey',LastShiftKey)
         #获取商品条码
         BarCode = self.f.read_tel('BarCode')
         setattr(Reflex, 'BarCode', BarCode)
@@ -58,9 +61,6 @@ class TestCases(unittest.TestCase):
         MyLog().info('URL：{0}，Params：{1}'.format(case['url'],params))
         #发起请求
         resp = HttpRequest().http_request(method, url, params,getattr(Reflex,'header'))
-        print(type(resp))
-        print(resp)
-        print(resp.text)
         MyLog().info('ActualResult：{}'.format(resp.text))
 
         # 会员支付成功后，获取支付id

@@ -1,7 +1,7 @@
 #__coding__:'utf-8'
 #auther:ly
 import unittest
-from ddt import ddt,data,unpack
+from ddt import ddt,data
 from kx_api.common.do_excel import DoExcel
 from kx_api.common import file_path
 from kx_api.common.http_request import HttpRequest
@@ -17,7 +17,7 @@ test_data = DoExcel(file_name).read_data(sheet_name)
 
 @ddt
 class TestCases(unittest.TestCase):
-    '''该类主要是用来写测试用例'''
+    '''该类是版本检测、绑定.基础信息、登录模块的测试用例'''
     def setUp(self):
         '''每次用例开始执行前，创建一个读写excel的对象'''
         self.f = DoExcel(file_name)
@@ -64,24 +64,51 @@ class TestCases(unittest.TestCase):
             i= findId(resp.json()['Result'],'ProductId',int(getattr(Reflex,'ProductId')))
             setattr(Reflex,'ProductStandardId',str(i['Id']))
 
-        print(getattr(Reflex,'BaseProductCategoryId'))
-        print(getattr(Reflex, 'ProductId'))
-        print(getattr(Reflex, 'ProductStandardId'))
         #获取结账方式主键
         if url.find('GetBasePaymentWayList') !=-1:
+            #人民币
             RMB= findId(resp.json()['Result'],'Code','00001')['Id']
             setattr(Reflex,'RMBId',str(RMB))
+            #会员卡支付
             MemberCardPayId = findId(resp.json()['Result'], 'Code', '00003')['Id']
             setattr(Reflex, 'MemberCardPayId', str(MemberCardPayId))
+            #任我行支付
             GraspPayId = findId(resp.json()['Result'], 'Code', '00002')['Id']
             setattr(Reflex, 'GraspPayId', str(GraspPayId))
+            #抹零
+            MLPayId = findId(resp.json()['Result'], 'Code', 'YH001')['Id']
+            setattr(Reflex, 'MLPayId', str(MLPayId))
+            #优惠
+            YHPayId = findId(resp.json()['Result'], 'Code', 'YH002')['Id']
+            setattr(Reflex, 'YHPayId', str(YHPayId))
+            #赠送
+            ZSPayId = findId(resp.json()['Result'], 'Code', 'YH003')['Id']
+            setattr(Reflex, 'ZSPayId', str(ZSPayId))
+            #免单
+            MDPayId = findId(resp.json()['Result'], 'Code', 'YH005')['Id']
+            setattr(Reflex, 'MDPayId', str(MDPayId))
 
         #获取用户信息，取返回的第一个数据
         if url.find('GetUserList') !=-1:
             UserId = findId(resp.json()['Result'], 'UserName',getattr(Reflex,'UserName') )['Id']
             setattr(Reflex, 'UserId', str(UserId))
 
-        #营销方案数据待增加
+        #营销方案主键数据待增加resp.text.find('全场8折') !=-1:
+        if url.find('GetProjectMasterList') !=-1:
+            i = findId(resp.json()['Result'], 'Name', '全场8折')
+            setattr(Reflex, 'AZProjectId', str(i['Id']))
+            i = findId(resp.json()['Result'], 'Name', '薯片7折')
+            setattr(Reflex, 'ZProjectId', str(i['Id']))
+            i = findId(resp.json()['Result'], 'Name', '果冻特价8元')
+            setattr(Reflex, 'TProjectId', str(i['Id']))
+        #获取营销方案中商品规格主键
+        if url.find('GetProjectProductStandard4DiscountList') !=-1:
+            #获取薯片的商品规格
+            i = findId(resp.json()['Result'], 'ProjectId',int(getattr(Reflex,'ZProjectId')) )
+            setattr(Reflex, 'ZProductStandardId', str(i['ProductStandardId']))
+            #获取果冻的商品规格
+            i = findId(resp.json()['Result'], 'ProjectId', int(getattr(Reflex,'TProjectId')))
+            setattr(Reflex, 'TProductStandardId', str(i['ProductStandardId']))
 
         # web登录成功后，返回的body里面带有token信息，需要将token信息放在header里面一起请求
         if resp.text.find('accessToken') != -1:

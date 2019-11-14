@@ -1,10 +1,9 @@
 #__coding__:'utf-8'
 #auther:ly
 from kx_api.common.my_config import MyConfig
-from kx_api.common.do_excel import DoExcel
-from kx_api.common import file_path
 import random
 import datetime
+
 class Reflex:
     '''反射类,实现对动态参数值修改、赋值、删除的操作'''
     #header用来存取web端，pos端登陆后token信息
@@ -59,24 +58,43 @@ class Reflex:
     #商品规格主键,获取基础信息时赋值
     ProductStandardId = None
 
-    #结账方式主键,人名币，会员卡，任我行
+    #结账方式主键,人名币，会员卡，任我行,抹零，优惠、赠送、免单
     RMBId = None
     MemberCardPayId = None
     GraspPayId = None
+    MLPayId = None
+    YHPayId = None
+    ZSPayId = None
+    MDPayId = None
 
     #任我行支付成功后，返回的数据,商户号，支付通返回的单号,可任意写
     BusinessId = '652711002512500000'
-    GraspBillNumberId = BillNumber
+    GraspBillNumberId = None
 
     # 用户登陆信息pos端登录时的用户名和密码
     UserId = None
     UserName = 'ly'
     Password = '123456'
 
+    #======上传账单 营销方案优惠所需参数(全场8折，果冻特价8元,薯片7折）=======
+    AZProjectId = None   #营销方案全场折扣主键
+    AZProjectProductCategoryId = None  #营销方案主键对应的商品分类主键
+    AZProjectMasterName = '全场8折'
+    #薯片7折
+    ZProjectId = None  # 营销方案薯片7折主键
+    ZProductStandardId = None  # 薯片商品规格主键
+    ZProjectMasterName = '薯片7折'
+
+    TProjectId = None   #营销方案特价主键
+    TProductStandardId = None    # 果冻对应的商品规格主键
+    TProjectMasterName = '果冻特价8元'
+
+
     #创建商品所需要的条形码
     BarCode= None
     #用户班次号excel维护，每次交班后加1
     ShiftKey = None
+    LastShiftKey = None
 
 
 if __name__ == '__main__':

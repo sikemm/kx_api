@@ -1,0 +1,356 @@
+[2019-11-14 16:28:02,865]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:登录web端----
+[2019-11-14 16:28:02,885]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/TokenAuth/Authenticate，Params：{
+  "tenancyName": "default",
+  "userNameOrEmailAddress": "admin",
+  "password": "admin"
+}
+[2019-11-14 16:28:02,969]-[INFO]-[日志信息]:ActualResult：{"result":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6ImU1MTE5NDNlLWY5OTUtZjk5NS0yMmJmLTM5ZjE3NjM3MWQ3MSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjEiLCJqdGkiOiJmNGY0ZGNlMS1hYjNlLTRjYTgtOWZiZS00NGUwMzMxMGZiMzkiLCJpYXQiOjE1NzM3MjAwODcsIkp3dFdlYlVuaXF1ZUlkIjoiYjUzMTAwZGQtMTI1MS00MjU3LThiMzctMDVlMzVmZmNmNmEyIiwiSnd0V2ViVGVuYW50SWQiOiIxIiwibmJmIjoxNTczNzIwMDg3LCJleHAiOjE1NzM4MDY0ODcsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.uoWrvBB8CSyjqum7nWjWDd-AUHrPJw270YjD9OfLQ-s","encryptedAccessToken":"wNYmO41/48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA/QhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi/FyB6axBY+6gq1GL+uRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U+og9pkHw9/QR4Nl/DPnoP9JYDMpZ1zxx09u6s0GZ9/Q5Sjk+L0UfcSCbl38X8he5w9UIn/Hvxh7ysM1CiPLsoOwtbiieSRVmrmt0JjnipAn4/K283F8GrGwzwgehWsqefmUnM0ckMwP9ZAdwQxWDhxv0IqNw4tDhwUYs/1SYdYozdNzgByhgNOBPzQDObNLlWc4vV5VMOiYHBOMNLV6WmJ4h3l9zRRXmjfn2He226iurtcv029//9vcQ4k+7iEv464BkdzAxdfTKUBj2kJ1gjYDtrLg/qWyRu/9fno69wGq1hJoj60As3lu8n0RUfOXz6E0ZVc53G4obkLrkeXDLSlFSlhRcmETzbW0oio12RjVwvy4O3qUO4Ed8buEQPjpy7bjikSh3Rv7dpDWsFAt4pjnuZU9X/H7hBVYoEkqkliRv3lQWxVzKJuVQUgBS4pW3IitFjSCO3aKkVBVvNoEdfjKgmn7q/dvJPbA6CwqFbzAKhwz4rxSxlo5AqlLhaOofxKiMf+CGXMnLum91GGvOGJ7D7065o/1AsJP1qPm2VKn1rr2dz22yCc0dg1QzfM3tzSVPP4p7wHutDguqpTv/YDfsJ3h/jvRCzykddhrS9jVkJMYPCaGrOmixDwl6QfT3/zRgzlL8yWcoB94U0OCXZqAjP3xJ6BrzLvsTWUn3HCVjVE/eHUPPTk5nFqLAjrQpmLjzZmrATujnzAb+dSg5mRDBMfRQXMHmOcMIgEfklS99I1o2a5HVIndneef8vqWOAjcvN02yfFX9ynz/efvN4Ga/kjU6/koCysWLH1cSS1ORqXNwbSInQy/eML3qwc/YObxeNdYLdnGQKfWPsE7PKOWoJKOwP2HStC95SnWHH6eF2MDHcvA7zox91faaTyMMqPICKjyg0g3sYHILD9xGZAoj5wfkjGdCidWsPugE4k+A7B0koG7VJ1UMZTN4gTlsuu/mGKfCUlE=","expireInSeconds":86400,"userId":1},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:04,146]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:新建店铺----
+[2019-11-14 16:28:04,150]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Create，Params：{ 
+ "id":"",
+ "sort":"",
+ "tenantId":"1",
+ "isActive":true,
+ "code":"CD",
+ "name":"红旗连锁",
+ "pyCode":"HQLS",
+ "businessType":1,
+ "businessTypeName":"直营",
+ "province":"四川省",
+ "city":"成都市",
+ "zone":"武侯区",
+ "street":"武侯大道888号",
+ "openTime":"08:00",
+ "closeTime":"22:00",
+ "address":"新希望大厦B座",
+ "storePhone":"15222222222",
+ "longitude":"经度",
+ "latitude":"纬度"
+ 
+}
+[2019-11-14 16:28:04,399]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644453503451791360","sort":"644453503451791360","isActive":true,"code":"CD","name":"红旗连锁","pyCode":"HQLS","businessType":1,"businessTypeName":"直营","province":"四川省","city":"成都市","zone":"武侯区","street":"武侯大道888号","address":"新希望大厦B座","openTime":"08:00","closeTime":"22:00","storePhone":"15222222222","longitude":"经度","latitude":"纬度","imageUrls":[]},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:05,567]-[INFO]-[日志信息]:---=正在执行web模块第3条测试用例:新增pos档案----
+[2019-11-14 16:28:05,569]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Create，Params：{
+  "id": "",
+  "sort": "",
+  "isActive": true,
+  "storeId": "644453503451791360",
+  "code": "1",
+  "name": "1",
+  "pyCode": "1",
+  "communicationPassword": "123456",
+  "machineName": "",
+  "storeIdName": "红旗连锁",
+  "storeCode": "CD"
+}
+[2019-11-14 16:28:05,648]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644453508812111872","sort":"644453508812111872","isActive":true,"storeId":"644453503451791360","code":"1","name":"1","pyCode":"1","communicationPassword":"123456","machineName":"","storeIdName":"红旗连锁","storeCode":"CD"},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:06,798]-[INFO]-[日志信息]:---=正在执行Auth模块第13条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-14 16:28:06,801]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-14 16:28:10,309]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":644453526667264000,"TenantId":1,"StoreId":644453503451791360,"PosId":644453508812111872,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-14T16:28:14.1275547+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:11,438]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第15条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-14 16:28:11,441]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBindId': '644453526667264000', 'StoreId': '644453503451791360', 'PosId': '644453508812111872', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:28:12,847]-[INFO]-[日志信息]:ActualResult：{"Result":[],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:12,859]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第21条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-14 16:28:12,861]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBindId': '644453526667264000', 'StoreId': '644453503451791360', 'PosId': '644453508812111872', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:28:12,962]-[INFO]-[日志信息]:ActualResult：{"Result":[],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:12,965]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第27条测试用例:已绑定的店铺且所有参数正确，获取商品规格数据成功----
+[2019-11-14 16:28:12,967]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardList，Params：{'TenantId': '1', 'ClientPosBindId': '644453526667264000', 'StoreId': '644453503451791360', 'PosId': '644453508812111872', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:28:13,061]-[INFO]-[日志信息]:ActualResult：{"Result":[],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:13,065]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第33条测试用例:已绑定的店铺且所有参数正确，获取商品规格条形码数据成功----
+[2019-11-14 16:28:13,068]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardBarCodeList，Params：{'TenantId': '1', 'ClientPosBindId': '644453526667264000', 'StoreId': '644453503451791360', 'PosId': '644453508812111872', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:28:13,158]-[INFO]-[日志信息]:ActualResult：{"Result":[],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:14,290]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第39条测试用例:已绑定的店铺且入参正确，获取结账方式成功----
+[2019-11-14 16:28:14,293]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBasePaymentWayList，Params：{'TenantId': '1', 'ClientPosBindId': '644453526667264000', 'StoreId': '644453503451791360', 'PosId': '644453508812111872', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:28:14,418]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644102593789820928,"Sort":644102593789820928,"Code":"YH001","Name":"抹零","PyCode":"ML","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820929,"Sort":644102593789820929,"Code":"YH002","Name":"优惠","PyCode":"YH","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820930,"Sort":644102593789820930,"Code":"YH003","Name":"赠送","PyCode":"ZS","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820931,"Sort":644102593789820931,"Code":"YH004","Name":"优惠券","PyCode":"YHQ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820932,"Sort":644102593789820932,"Code":"YH005","Name":"免单","PyCode":"MD","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820933,"Sort":644102593789820933,"Code":"00001","Name":"人民币","PyCode":"RMB","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820934,"Sort":644102593789820934,"Code":"00002","Name":"任我行支付","PyCode":"RWXZF","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820935,"Sort":644102593789820935,"Code":"00003","Name":"会员卡储值","PyCode":"HYKCZ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:15,553]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第45条测试用例:已绑定的店铺且入参正确，获取用户数据成功----
+[2019-11-14 16:28:15,555]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetUserList，Params：{'TenantId': '1', 'ClientPosBindId': '644453526667264000', 'StoreId': '644453503451791360', 'PosId': '644453508812111872', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:28:15,683]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":1,"UserName":"admin","PosClientSalt":"fadf4e02-1c7c-49dd-bef0-9f0a201e7222","PosClientPassword":"3E337B184C41365203FC721F1C8E0C113A0BB37E","Permission":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:15,686]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第93条测试用例:登录pos端----
+[2019-11-14 16:28:15,688]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "644453526667264000",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-14 16:28:16,306]-[INFO]-[日志信息]:ActualResult：{"Result":null,"TargetUrl":null,"Success":false,"Error":{"Code":0,"Message":"登录失败，请查看登录信息是否正确！","Details":"UserFriendlyException: 登录失败，请查看登录信息是否正确！\r\nSTACK TRACE:    at GraspSaas.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in E:\\Worked\\@GraspShop\\GraspPosShop.Api\\src\\GraspSaas.PosApi.Core\\Controllers\\TokenAuthController.cs:line 279\r\n   at GraspSaas.Controllers.TokenAuthController.Authenticate(AuthenticateInput input) in E:\\Worked\\@GraspShop\\GraspPosShop.Api\\src\\GraspSaas.PosApi.Core\\Controllers\\TokenAuthController.cs:line 82\r\n   at lambda_method(Closure , Object )\r\n   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()\r\n","ValidationErrors":null},"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:28:16,308]-[ERROR]-[日志信息]:ERROR：登录失败，请查看登录信息是否正确！
+[2019-11-14 16:28:16,310]-[ERROR]-[日志信息]:用例执行失败：{'Success': True} != {'Success': False}
+- {'Success': True}
+?             ^^^
+
++ {'Success': False}
+?             ^^^^
+
+[2019-11-14 16:28:17,447]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:删除新增的pos档案----
+[2019-11-14 16:28:17,449]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Delete，Params：644453508812111872
+[2019-11-14 16:28:17,453]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:删除新增的店铺信息----
+[2019-11-14 16:28:17,455]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Delete，Params：644453503451791360
+[2019-11-14 16:32:10,170]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:登录web端----
+[2019-11-14 16:32:10,173]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/TokenAuth/Authenticate，Params：{
+  "tenancyName": "default",
+  "userNameOrEmailAddress": "admin",
+  "password": "admin"
+}
+[2019-11-14 16:32:10,244]-[INFO]-[日志信息]:ActualResult：{"result":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6ImU1MTE5NDNlLWY5OTUtZjk5NS0yMmJmLTM5ZjE3NjM3MWQ3MSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjEiLCJqdGkiOiJjYjdlOWUzOC1kMzgwLTRlZDAtODhkMy01ZTAzMTY1MzEyNDAiLCJpYXQiOjE1NzM3MjAzMzQsIkp3dFdlYlVuaXF1ZUlkIjoiN2YwYjUyNjYtY2ZlNC00NjQ3LTlmNDYtYzIxNGRkZDJjZDhhIiwiSnd0V2ViVGVuYW50SWQiOiIxIiwibmJmIjoxNTczNzIwMzM0LCJleHAiOjE1NzM4MDY3MzQsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.tE1mLcfOo2TR8hZL70-TXd22KkdrKE7GxpupDuNuo8A","encryptedAccessToken":"wNYmO41/48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA/QhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi/FyB6axBY+6gq1GL+uRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U+og9pkHw9/QR4Nl/DPnoP9JYDMpZ1zxx09u6s0GZ9/Q5Sjk+L0UfcSCbl38X8he5w9UIn/Hvxh7ysM1CiPLsoOwtbiieSRVmrmt0JjnipAn4/K283F8GrGwzwgehWsqefmUnM0ckMwP9ZAdwQxWDhxv0IqNw4tDhwUYs/1SYdYozdNzgByhgNOBPzQDObNLlWc4vV5VMOiYHBOMNLV6WmJ4h3l9zRRXmjfn2He226iurtcv029//9vcQ4k+7iEv464BkdzAxdfTKUBj2kJ1gjYDtrLg/qWyRu/9fno69wGq1hJoj60As3lu8n0RUfOXz6E0ZVc53G4obkLrkeXDLSlFSlhRcmETzbW0oio12RjVwvy4O3qUO4Ed8buEQPjpy7bjikSh3Rv7dpDWsFAt4pjnuZU9X/H7hBVYoEkqkliRv3lQWxVzKJuVQUgBS4pW3IitFjSCO3aKkVBVvNoEdfjKgmn7q/dvJPbA6CwqFbzAKhwz4rxSxlo5AqlLhaOofxKiMf+CGXMnLum91GGvOGJ7D7065o/1AJcqFWfz/ZLnVoALAD4WUntNo9Dpgb0xal4JEuL8Vixv30UdPNucy06DQ5m2hGYxHPxG6dgbdT7f1pFxUD2EIJtAQreLwgrAx8SN3HG34RvdOO1OknEFDzW+rDEPBnT/fTrGJinkIqSQYVZobdjX7F4ZfcNMSV69a8s/8rL+WQIBAlvsHHDveethLu1ScONafCFd+vxQI+L2R9pS8mdEN5/aUyczRs9to/nwA+JAN5poAd4Im2S8SDhhwQn+c7fGZnqoWvi0t3v/ar/2y+ZqPDLxPykd3ON4yO8Cf0bCvVE3b4d+hNr+kPaWVTn1jV5GKSVZ0v6IDte238v35YtXPWWttqoep2XYv/xTgxzBNUdlw5F7e1NyZZnB1Z2zSBHKCJaKlJzGoelr1uMdUeyqNb18sT8h10y3NBMh+sIGEPKQ=","expireInSeconds":86400,"userId":1},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:11,403]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:新建店铺----
+[2019-11-14 16:32:11,405]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Create，Params：{ 
+ "id":"",
+ "sort":"",
+ "tenantId":"1",
+ "isActive":true,
+ "code":"CD",
+ "name":"红旗连锁",
+ "pyCode":"HQLS",
+ "businessType":1,
+ "businessTypeName":"直营",
+ "province":"四川省",
+ "city":"成都市",
+ "zone":"武侯区",
+ "street":"武侯大道888号",
+ "openTime":"08:00",
+ "closeTime":"22:00",
+ "address":"新希望大厦B座",
+ "storePhone":"15222222222",
+ "longitude":"经度",
+ "latitude":"纬度"
+ 
+}
+[2019-11-14 16:32:11,447]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644454539813978112","sort":"644454539813978112","isActive":true,"code":"CD","name":"红旗连锁","pyCode":"HQLS","businessType":1,"businessTypeName":"直营","province":"四川省","city":"成都市","zone":"武侯区","street":"武侯大道888号","address":"新希望大厦B座","openTime":"08:00","closeTime":"22:00","storePhone":"15222222222","longitude":"经度","latitude":"纬度","imageUrls":[]},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:12,611]-[INFO]-[日志信息]:---=正在执行web模块第3条测试用例:新增pos档案----
+[2019-11-14 16:32:12,614]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Create，Params：{
+  "id": "",
+  "sort": "",
+  "isActive": true,
+  "storeId": "644454539813978112",
+  "code": "1",
+  "name": "1",
+  "pyCode": "1",
+  "communicationPassword": "123456",
+  "machineName": "",
+  "storeIdName": "红旗连锁",
+  "storeCode": "CD"
+}
+[2019-11-14 16:32:12,650]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644454544893280256","sort":"644454544893280256","isActive":true,"storeId":"644454539813978112","code":"1","name":"1","pyCode":"1","communicationPassword":"123456","machineName":"","storeIdName":"红旗连锁","storeCode":"CD"},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:13,781]-[INFO]-[日志信息]:---=正在执行Auth模块第13条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-14 16:32:13,785]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-14 16:32:13,839]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":644454549884502016,"TenantId":1,"StoreId":644454539813978112,"PosId":644454544893280256,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-14T16:32:18.0814164+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:14,965]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第15条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-14 16:32:14,970]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBindId': '644454549884502016', 'StoreId': '644454539813978112', 'PosId': '644454544893280256', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:32:15,078]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454035977404416,"Sort":644454035977404416,"PId":0,"Code":"1","Name":"零食","PyCode":"ls"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:16,193]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第21条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-14 16:32:16,195]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBindId': '644454549884502016', 'StoreId': '644454539813978112', 'PosId': '644454544893280256', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:32:16,288]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219704696832,"Sort":644454219704696832,"ProductCategoryId":644454035977404416,"Code":"012","Name":"薯片","PyCode":"sp","Spec":"袋","PricingMode":1}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:17,434]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第27条测试用例:已绑定的店铺且所有参数正确，获取商品规格数据成功----
+[2019-11-14 16:32:17,437]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardList，Params：{'TenantId': '1', 'ClientPosBindId': '644454549884502016', 'StoreId': '644454539813978112', 'PosId': '644454544893280256', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:32:17,522]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219750834176,"ProductId":644454219704696832,"StandardName":"袋","StandardRelation":1.0000000000,"RetailPrice":5.0000000000,"MemberPrice":4.0000000000}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:18,652]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第33条测试用例:已绑定的店铺且所有参数正确，获取商品规格条形码数据成功----
+[2019-11-14 16:32:18,654]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardBarCodeList，Params：{'TenantId': '1', 'ClientPosBindId': '644454549884502016', 'StoreId': '644454539813978112', 'PosId': '644454544893280256', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:32:18,737]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219776000000,"BaseProductStandardId":644454219750834176,"BarCode":"11111111"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:19,890]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第39条测试用例:已绑定的店铺且入参正确，获取结账方式成功----
+[2019-11-14 16:32:19,893]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBasePaymentWayList，Params：{'TenantId': '1', 'ClientPosBindId': '644454549884502016', 'StoreId': '644454539813978112', 'PosId': '644454544893280256', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:32:19,921]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644102593789820928,"Sort":644102593789820928,"Code":"YH001","Name":"抹零","PyCode":"ML","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820929,"Sort":644102593789820929,"Code":"YH002","Name":"优惠","PyCode":"YH","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820930,"Sort":644102593789820930,"Code":"YH003","Name":"赠送","PyCode":"ZS","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820931,"Sort":644102593789820931,"Code":"YH004","Name":"优惠券","PyCode":"YHQ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820932,"Sort":644102593789820932,"Code":"YH005","Name":"免单","PyCode":"MD","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820933,"Sort":644102593789820933,"Code":"00001","Name":"人民币","PyCode":"RMB","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820934,"Sort":644102593789820934,"Code":"00002","Name":"任我行支付","PyCode":"RWXZF","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820935,"Sort":644102593789820935,"Code":"00003","Name":"会员卡储值","PyCode":"HYKCZ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:21,102]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第45条测试用例:已绑定的店铺且入参正确，获取用户数据成功----
+[2019-11-14 16:32:21,104]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetUserList，Params：{'TenantId': '1', 'ClientPosBindId': '644454549884502016', 'StoreId': '644454539813978112', 'PosId': '644454544893280256', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:32:21,138]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":2,"UserName":"ly","PosClientSalt":"501b1f00-2939-4e8a-b671-a5482df4805a","PosClientPassword":"E4680A1D7E43785850FC678D5286158F57972472","Permission":null},{"Id":1,"UserName":"admin","PosClientSalt":"fadf4e02-1c7c-49dd-bef0-9f0a201e7222","PosClientPassword":"3E337B184C41365203FC721F1C8E0C113A0BB37E","Permission":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:22,304]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第93条测试用例:登录pos端----
+[2019-11-14 16:32:22,307]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "644454549884502016",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-14 16:32:22,896]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IkI3QkNQWVJRS01XM09LRDJLRU1EWTc2TkkzSkNENFJQIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjIiLCJqdGkiOiJmMmJiYjY1Yi04OTA2LTQwMWEtYmNkYi1kYzBkMDNkNWYwYTIiLCJpYXQiOjE1NzM3MjAzNDcsIkp3dENsaWVudFVuaXF1ZUlkIjoiMGEyN2JlZGEtMDg5NC00ODhjLThiYjctMTAzZDlhMDdiMDU1IiwiSnd0Q2xpZW50U3RvcmVJZCI6IjY0NDQ1NDUzOTgxMzk3ODExMiIsIkp3dENsaWVudFRlbmFudElkIjoiMSIsIkp3dENsaWVudFBvc0lkIjoiNjQ0NDU0NTQ0ODkzMjgwMjU2IiwibmJmIjoxNTczNzIwMzQ3LCJleHAiOjE1NzM4MDY3NDcsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.x52UmV3dTCOxA4ZtA_v8u80V-Lo4l9FMnI5qB3fLBx8","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:32:24,276]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:删除新增的pos档案----
+[2019-11-14 16:32:24,278]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Delete，Params：644454544893280256
+[2019-11-14 16:32:24,282]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:删除新增的店铺信息----
+[2019-11-14 16:32:24,285]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Delete，Params：644454539813978112
+[2019-11-14 16:35:47,071]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:登录web端----
+[2019-11-14 16:35:47,073]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/TokenAuth/Authenticate，Params：{
+  "tenancyName": "default",
+  "userNameOrEmailAddress": "admin",
+  "password": "admin"
+}
+[2019-11-14 16:35:47,136]-[INFO]-[日志信息]:ActualResult：{"result":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6ImU1MTE5NDNlLWY5OTUtZjk5NS0yMmJmLTM5ZjE3NjM3MWQ3MSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjEiLCJqdGkiOiJlMDY2ZThiMC05ZDE3LTQzNDYtOWYzMy1lMzUzYWUwYWVmMGYiLCJpYXQiOjE1NzM3MjA1NTEsIkp3dFdlYlVuaXF1ZUlkIjoiNGNlNTI3NTctODNkYy00NTE1LTk2YjEtY2IzZDNjNDZjNmY3IiwiSnd0V2ViVGVuYW50SWQiOiIxIiwibmJmIjoxNTczNzIwNTUxLCJleHAiOjE1NzM4MDY5NTEsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.THerQLEEpqsVjU1AHFoOcypgi2K1WpQc94V_YO0fUTc","encryptedAccessToken":"wNYmO41/48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA/QhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi/FyB6axBY+6gq1GL+uRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U+og9pkHw9/QR4Nl/DPnoP9JYDMpZ1zxx09u6s0GZ9/Q5Sjk+L0UfcSCbl38X8he5w9UIn/Hvxh7ysM1CiPLsoOwtbiieSRVmrmt0JjnipAn4/K283F8GrGwzwgehWsqefmUnM0ckMwP9ZAdwQxWDhxv0IqNw4tDhwUYs/1SYdYozdNzgByhgNOBPzQDObNLlWc4vV5VMOiYHBOMNLV6WmJ4h3l9zRRXmjfn2He226iurtcv029//9vcQ4k+7iEv464BkdzAxdfTKUBj2kJ1gjYDtrLg/qWyRu/9fno69wGq1hJoj60As3lu8n0RUfOXz6E0ZVc53G4obkLrkeXDLSlFSlhRcmETzbW0oio12RjVwvy4O3qUO4Ed8buEQPjpy7bjikSh3Rv7dpDWsFAt4pjnuZU9X/H7hBVYoEkqkliRv3lQWxVzKJuVQUgBS4pW3IitFjSCO3aKkVBVvNoEdfjKgmn7q/dvJPbA6CwqFbzAKhwz4rxSxlo5AqlLhaOofxKiMf+CGXMnLum91GGvOGJ7D7065o/1A+UCJnj8yS660iNcY7OpwCQrvReC2vzPKNq/ru58p+ebMtdsUr4nmkGSRTem/BgEGJcbt4GZYifT9BY1rj46vQV58vkN0vwYforoUBhDh8eEFNBgcV4BFPH/lTPDRR1QWpwFsX7qfORn/EI4yD4acfE70ZEjanFV+jhB+L9tzT0Fj9NuW1tKY+PyeL/W25ETWbpZyo1tKfXrbuQY0DyTwx9GIBupNF06ezCCNh1Uw11XmS/aT1+ZLraXAzMm1paPrP4Jnn5e3qsQNvzzoQ3mkGkBTrEoZEy3z2dpw1hJPOW3KX6IfzmwKYP6P7+yGQtLUIEoFyJddE6LxA+Z2HJiCPxtG3WmqfCJ+2zbHehEq1cBcdFG6Zf5IcOQxmQrAWeiINMLA8qqnI1vIJv2AD0H0NEesT68DnukyGOV9UW1w9m0=","expireInSeconds":86400,"userId":1},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:48,238]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:新建店铺----
+[2019-11-14 16:35:48,240]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Create，Params：{ 
+ "id":"",
+ "sort":"",
+ "tenantId":"1",
+ "isActive":true,
+ "code":"CD",
+ "name":"红旗连锁",
+ "pyCode":"HQLS",
+ "businessType":1,
+ "businessTypeName":"直营",
+ "province":"四川省",
+ "city":"成都市",
+ "zone":"武侯区",
+ "street":"武侯大道888号",
+ "openTime":"08:00",
+ "closeTime":"22:00",
+ "address":"新希望大厦B座",
+ "storePhone":"15222222222",
+ "longitude":"经度",
+ "latitude":"纬度"
+ 
+}
+[2019-11-14 16:35:48,352]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644455449587875840","sort":"644455449587875840","isActive":true,"code":"CD","name":"红旗连锁","pyCode":"HQLS","businessType":1,"businessTypeName":"直营","province":"四川省","city":"成都市","zone":"武侯区","street":"武侯大道888号","address":"新希望大厦B座","openTime":"08:00","closeTime":"22:00","storePhone":"15222222222","longitude":"经度","latitude":"纬度","imageUrls":[]},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:49,517]-[INFO]-[日志信息]:---=正在执行web模块第3条测试用例:新增pos档案----
+[2019-11-14 16:35:49,520]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Create，Params：{
+  "id": "",
+  "sort": "",
+  "isActive": true,
+  "storeId": "644455449587875840",
+  "code": "1",
+  "name": "1",
+  "pyCode": "1",
+  "communicationPassword": "123456",
+  "machineName": "",
+  "storeIdName": "红旗连锁",
+  "storeCode": "CD"
+}
+[2019-11-14 16:35:49,559]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644455454738481152","sort":"644455454738481152","isActive":true,"storeId":"644455449587875840","code":"1","name":"1","pyCode":"1","communicationPassword":"123456","machineName":"","storeIdName":"红旗连锁","storeCode":"CD"},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:50,702]-[INFO]-[日志信息]:---=正在执行Auth模块第13条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-14 16:35:50,704]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-14 16:35:50,793]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":644455459826171904,"TenantId":1,"StoreId":644455449587875840,"PosId":644455454738481152,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-14T16:35:55.0285557+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:51,963]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第15条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-14 16:35:51,965]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBindId': '644455459826171904', 'StoreId': '644455449587875840', 'PosId': '644455454738481152', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:35:52,032]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454035977404416,"Sort":644454035977404416,"PId":0,"Code":"1","Name":"零食","PyCode":"ls"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:53,179]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第21条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-14 16:35:53,182]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBindId': '644455459826171904', 'StoreId': '644455449587875840', 'PosId': '644455454738481152', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:35:53,251]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219704696832,"Sort":644454219704696832,"ProductCategoryId":644454035977404416,"Code":"012","Name":"薯片","PyCode":"sp","Spec":"袋","PricingMode":1}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:54,412]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第27条测试用例:已绑定的店铺且所有参数正确，获取商品规格数据成功----
+[2019-11-14 16:35:54,413]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardList，Params：{'TenantId': '1', 'ClientPosBindId': '644455459826171904', 'StoreId': '644455449587875840', 'PosId': '644455454738481152', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:35:54,480]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219750834176,"ProductId":644454219704696832,"StandardName":"袋","StandardRelation":1.0000000000,"RetailPrice":5.0000000000,"MemberPrice":4.0000000000}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:55,624]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第33条测试用例:已绑定的店铺且所有参数正确，获取商品规格条形码数据成功----
+[2019-11-14 16:35:55,627]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardBarCodeList，Params：{'TenantId': '1', 'ClientPosBindId': '644455459826171904', 'StoreId': '644455449587875840', 'PosId': '644455454738481152', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:35:55,697]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219776000000,"BaseProductStandardId":644454219750834176,"BarCode":"11111111"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:56,849]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第39条测试用例:已绑定的店铺且入参正确，获取结账方式成功----
+[2019-11-14 16:35:56,851]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBasePaymentWayList，Params：{'TenantId': '1', 'ClientPosBindId': '644455459826171904', 'StoreId': '644455449587875840', 'PosId': '644455454738481152', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:35:56,890]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644102593789820928,"Sort":644102593789820928,"Code":"YH001","Name":"抹零","PyCode":"ML","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820929,"Sort":644102593789820929,"Code":"YH002","Name":"优惠","PyCode":"YH","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820930,"Sort":644102593789820930,"Code":"YH003","Name":"赠送","PyCode":"ZS","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820931,"Sort":644102593789820931,"Code":"YH004","Name":"优惠券","PyCode":"YHQ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820932,"Sort":644102593789820932,"Code":"YH005","Name":"免单","PyCode":"MD","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820933,"Sort":644102593789820933,"Code":"00001","Name":"人民币","PyCode":"RMB","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820934,"Sort":644102593789820934,"Code":"00002","Name":"任我行支付","PyCode":"RWXZF","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820935,"Sort":644102593789820935,"Code":"00003","Name":"会员卡储值","PyCode":"HYKCZ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:58,029]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第45条测试用例:已绑定的店铺且入参正确，获取用户数据成功----
+[2019-11-14 16:35:58,031]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetUserList，Params：{'TenantId': '1', 'ClientPosBindId': '644455459826171904', 'StoreId': '644455449587875840', 'PosId': '644455454738481152', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:35:58,057]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":2,"UserName":"ly","PosClientSalt":"501b1f00-2939-4e8a-b671-a5482df4805a","PosClientPassword":"E4680A1D7E43785850FC678D5286158F57972472","Permission":null},{"Id":1,"UserName":"admin","PosClientSalt":"fadf4e02-1c7c-49dd-bef0-9f0a201e7222","PosClientPassword":"3E337B184C41365203FC721F1C8E0C113A0BB37E","Permission":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:35:59,189]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第93条测试用例:登录pos端----
+[2019-11-14 16:35:59,192]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "644455459826171904",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-14 16:35:59,320]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IkI3QkNQWVJRS01XM09LRDJLRU1EWTc2TkkzSkNENFJQIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjIiLCJqdGkiOiI4NTZlYTdlNy0zOGYyLTQxMmItOWRjMi04ZDNlNTYwNGZmMzMiLCJpYXQiOjE1NzM3MjA1NjMsIkp3dENsaWVudFVuaXF1ZUlkIjoiNDNmYWI3MjctY2U2YS00OTFhLTlkMDItMzQ1NThmNjgyNGI2IiwiSnd0Q2xpZW50U3RvcmVJZCI6IjY0NDQ1NTQ0OTU4Nzg3NTg0MCIsIkp3dENsaWVudFRlbmFudElkIjoiMSIsIkp3dENsaWVudFBvc0lkIjoiNjQ0NDU1NDU0NzM4NDgxMTUyIiwibmJmIjoxNTczNzIwNTYzLCJleHAiOjE1NzM4MDY5NjMsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.C6Q6ceKtCzTY4267_UpAD9VD-khpTvd1AAO7GW5oALM","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:36:00,451]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:删除新增的pos档案----
+[2019-11-14 16:36:00,453]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Delete，Params：{'Id': 644455454738481152}
+[2019-11-14 16:36:00,638]-[INFO]-[日志信息]:ActualResult：{"result":null,"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:36:01,786]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:删除新增的店铺信息----
+[2019-11-14 16:36:01,789]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Delete，Params：{'Id': 644455449587875840}
+[2019-11-14 16:36:01,861]-[INFO]-[日志信息]:ActualResult：{"result":null,"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:37:56,556]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:登录web端----
+[2019-11-14 16:37:56,559]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/TokenAuth/Authenticate，Params：{
+  "tenancyName": "default",
+  "userNameOrEmailAddress": "admin",
+  "password": "admin"
+}
+[2019-11-14 16:37:56,837]-[INFO]-[日志信息]:ActualResult：{"result":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6ImU1MTE5NDNlLWY5OTUtZjk5NS0yMmJmLTM5ZjE3NjM3MWQ3MSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjEiLCJqdGkiOiIwOTVmNTc5NS1kYmE3LTQ5MTUtOTE2MC1hNDY1OGE3Y2ZkZWQiLCJpYXQiOjE1NzM3MjA2ODEsIkp3dFdlYlVuaXF1ZUlkIjoiY2IwZTAzYzYtOGY0Ni00NjkwLTgwNzEtMWJlZTY3NGVkZWFlIiwiSnd0V2ViVGVuYW50SWQiOiIxIiwibmJmIjoxNTczNzIwNjgxLCJleHAiOjE1NzM4MDcwODEsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.55iCqP-1P-vldUhcpZ3YnDPz8zRgTNmufCFXkyzJ4GY","encryptedAccessToken":"wNYmO41/48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA/QhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi/FyB6axBY+6gq1GL+uRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U+og9pkHw9/QR4Nl/DPnoP9JYDMpZ1zxx09u6s0GZ9/Q5Sjk+L0UfcSCbl38X8he5w9UIn/Hvxh7ysM1CiPLsoOwtbiieSRVmrmt0JjnipAn4/K283F8GrGwzwgehWsqefmUnM0ckMwP9ZAdwQxWDhxv0IqNw4tDhwUYs/1SYdYozdNzgByhgNOBPzQDObNLlWc4vV5VMOiYHBOMNLV6WmJ4h3l9zRRXmjfn2He226iurtcv029//9vcQ4k+7iEv464BkdzAxdfTKUBj2kJ1gjYDtrLg/qWyRu/9fno69wGq1hJoj60As3lu8n0RUfOXz6E0ZVc53G4obkLrkeXDLSlFSlhRcmETzbW0oio12RjVwvy4O3qUO4Ed8buEQPjpy7bjikSh3Rv7dpDWsFAt4pjnuZU9X/H7hBVYoEkqkliRv3lQWxVzKJuVQUgBS4pW3IitFjSCO3aKkVBVvNoEdfjKgmn7q/dvJPbA6CwqFbzAKhwz4rxSxlo5AqlLhaOofxKiMf+CGXMlqQfUaxlGDqvf8f37sYolSlEhoFVaygINf3cAdnSdCO1mwnZLqX96KVIAdl+viQjs8Q2dP0g1G3Xv6rXRZ+kKzWt/4/xUDiucKlBhc3/F+z2gt63M0FXniAIx68+ClYqYaYjaZ3n+6Hy4fdxSKK3Z7S5VhtMFKpgdSJDIzNvbc+n1vxAzzUt6XMref13vxKLXE6JlmeMiyLmoLW66EPaaci9jU430dsgWJjkbRpp7axzTY4Ayg3Doc3PQLGkM2pnNHz7Cm8+xNnxLjzG3WzsfCWkGPTmy+JtSM7Hz3WNUx0A0cGtQexEPZp7eC0wiuLfKwdSlhHnkIWZ80c5Oosoj7lzoXeG/izhJMPKUtPyZwjkaI6HMMwBuOol4W5SYnrslK3kwlTRqjN0TxLWC1BdcZG8SeEZxbosTdT3cTP/vahzsU07GJy9o6lRuE2LMIk6A=","expireInSeconds":86400,"userId":1},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:37:57,975]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:新建店铺----
+[2019-11-14 16:37:57,977]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Create，Params：{ 
+ "id":"",
+ "sort":"",
+ "tenantId":"1",
+ "isActive":true,
+ "code":"CD",
+ "name":"红旗连锁",
+ "pyCode":"HQLS",
+ "businessType":1,
+ "businessTypeName":"直营",
+ "province":"四川省",
+ "city":"成都市",
+ "zone":"武侯区",
+ "street":"武侯大道888号",
+ "openTime":"08:00",
+ "closeTime":"22:00",
+ "address":"新希望大厦B座",
+ "storePhone":"15222222222",
+ "longitude":"经度",
+ "latitude":"纬度"
+ 
+}
+[2019-11-14 16:38:09,926]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644456041639051264","sort":"644456041639051264","isActive":true,"code":"CD","name":"红旗连锁","pyCode":"HQLS","businessType":1,"businessTypeName":"直营","province":"四川省","city":"成都市","zone":"武侯区","street":"武侯大道888号","address":"新希望大厦B座","openTime":"08:00","closeTime":"22:00","storePhone":"15222222222","longitude":"经度","latitude":"纬度","imageUrls":[]},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:11,075]-[INFO]-[日志信息]:---=正在执行web模块第3条测试用例:新增pos档案----
+[2019-11-14 16:38:11,077]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Create，Params：{
+  "id": "",
+  "sort": "",
+  "isActive": true,
+  "storeId": "644456041639051264",
+  "code": "1",
+  "name": "1",
+  "pyCode": "1",
+  "communicationPassword": "123456",
+  "machineName": "",
+  "storeIdName": "红旗连锁",
+  "storeCode": "CD"
+}
+[2019-11-14 16:38:11,578]-[INFO]-[日志信息]:ActualResult：{"result":{"id":"644456050296094720","sort":"644456050296094720","isActive":true,"storeId":"644456041639051264","code":"1","name":"1","pyCode":"1","communicationPassword":"123456","machineName":"","storeIdName":"红旗连锁","storeCode":"CD"},"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:12,736]-[INFO]-[日志信息]:---=正在执行Auth模块第13条测试用例:winpos端，入参正确，绑定成功----
+[2019-11-14 16:38:12,738]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/Auth/Bind，Params：{
+  "TenancyName":"default",
+  "StoreCode":"CD",
+  "PosCode":"1",
+  "CommunicationPassword":"123456",
+  "MachineMac":"00-50-56-C0-00-01",
+  "MachineName":"DESKTOP-5T5IDNR",
+  "Platform":1
+}
+[2019-11-14 16:38:15,204]-[INFO]-[日志信息]:ActualResult：{"Result":{"Id":644456064107937792,"TenantId":1,"StoreId":644456041639051264,"PosId":644456050296094720,"Platform":1,"MachineMac":"00-50-56-C0-00-01","MachineName":"DESKTOP-5T5IDNR","BindTime":"2019-11-14T16:38:19.1004249+08:00","UnBindTime":"0001-01-01T00:00:00","BaseStore":null,"ManagePos":null},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:16,347]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第15条测试用例:已绑定的店铺且所有参数正确，获取商品分类数据成功----
+[2019-11-14 16:38:16,349]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductCategoryList，Params：{'TenantId': '1', 'ClientPosBindId': '644456064107937792', 'StoreId': '644456041639051264', 'PosId': '644456050296094720', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:38:18,158]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454035977404416,"Sort":644454035977404416,"PId":0,"Code":"1","Name":"零食","PyCode":"ls"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:19,308]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第21条测试用例:已绑定的店铺且所有参数正确，获取商品数据成功----
+[2019-11-14 16:38:19,310]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductList，Params：{'TenantId': '1', 'ClientPosBindId': '644456064107937792', 'StoreId': '644456041639051264', 'PosId': '644456050296094720', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:38:19,436]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219704696832,"Sort":644454219704696832,"ProductCategoryId":644454035977404416,"Code":"012","Name":"薯片","PyCode":"sp","Spec":"袋","PricingMode":1}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:20,592]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第27条测试用例:已绑定的店铺且所有参数正确，获取商品规格数据成功----
+[2019-11-14 16:38:20,594]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardList，Params：{'TenantId': '1', 'ClientPosBindId': '644456064107937792', 'StoreId': '644456041639051264', 'PosId': '644456050296094720', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:38:20,700]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219750834176,"ProductId":644454219704696832,"StandardName":"袋","StandardRelation":1.0000000000,"RetailPrice":5.0000000000,"MemberPrice":4.0000000000}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:21,869]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第33条测试用例:已绑定的店铺且所有参数正确，获取商品规格条形码数据成功----
+[2019-11-14 16:38:21,873]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBaseProductStandardBarCodeList，Params：{'TenantId': '1', 'ClientPosBindId': '644456064107937792', 'StoreId': '644456041639051264', 'PosId': '644456050296094720', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:38:21,974]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644454219776000000,"BaseProductStandardId":644454219750834176,"BarCode":"11111111"}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:23,152]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第39条测试用例:已绑定的店铺且入参正确，获取结账方式成功----
+[2019-11-14 16:38:23,155]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetBasePaymentWayList，Params：{'TenantId': '1', 'ClientPosBindId': '644456064107937792', 'StoreId': '644456041639051264', 'PosId': '644456050296094720', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:38:23,223]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":644102593789820928,"Sort":644102593789820928,"Code":"YH001","Name":"抹零","PyCode":"ML","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820929,"Sort":644102593789820929,"Code":"YH002","Name":"优惠","PyCode":"YH","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820930,"Sort":644102593789820930,"Code":"YH003","Name":"赠送","PyCode":"ZS","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820931,"Sort":644102593789820931,"Code":"YH004","Name":"优惠券","PyCode":"YHQ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820932,"Sort":644102593789820932,"Code":"YH005","Name":"免单","PyCode":"MD","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":1,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820933,"Sort":644102593789820933,"Code":"00001","Name":"人民币","PyCode":"RMB","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820934,"Sort":644102593789820934,"Code":"00002","Name":"任我行支付","PyCode":"RWXZF","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null},{"Id":644102593789820935,"Sort":644102593789820935,"Code":"00003","Name":"会员卡储值","PyCode":"HYKCZ","Remark":null,"IsOpenMoneyBox":false,"PaymentWayType":2,"IsPreset":true,"ShortcutKey":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:24,371]-[INFO]-[日志信息]:---=正在执行BaseInfo模块第45条测试用例:已绑定的店铺且入参正确，获取用户数据成功----
+[2019-11-14 16:38:24,373]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/services/app/BaseInfo/GetUserList，Params：{'TenantId': '1', 'ClientPosBindId': '644456064107937792', 'StoreId': '644456041639051264', 'PosId': '644456050296094720', 'MachineMac': '00-50-56-C0-00-01', 'MachineName': 'DESKTOP-5T5IDNR'}
+[2019-11-14 16:38:24,460]-[INFO]-[日志信息]:ActualResult：{"Result":[{"Id":2,"UserName":"ly","PosClientSalt":"501b1f00-2939-4e8a-b671-a5482df4805a","PosClientPassword":"E4680A1D7E43785850FC678D5286158F57972472","Permission":null},{"Id":1,"UserName":"admin","PosClientSalt":"fadf4e02-1c7c-49dd-bef0-9f0a201e7222","PosClientPassword":"3E337B184C41365203FC721F1C8E0C113A0BB37E","Permission":null}],"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:25,619]-[INFO]-[日志信息]:---=正在执行TokenAuth模块第93条测试用例:登录pos端----
+[2019-11-14 16:38:25,621]-[INFO]-[日志信息]:URL：http://192.168.1.41:11001/api/TokenAuth/Authenticate，Params：{
+  "ClientPosBindId": "644456064107937792",
+  "UserName": "ly",
+  "Password": "123456"
+}
+[2019-11-14 16:38:26,932]-[INFO]-[日志信息]:ActualResult：{"Result":{"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHkiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IkI3QkNQWVJRS01XM09LRDJLRU1EWTc2TkkzSkNENFJQIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjIiLCJqdGkiOiIwMDAxZDI4NC02NzU4LTQ2ZWYtYWYxMS0yMzczMzM1MGQ2MTgiLCJpYXQiOjE1NzM3MjA3MTAsIkp3dENsaWVudFVuaXF1ZUlkIjoiNzBjYjBkNmQtNmYwOC00OGE4LWI2YzYtN2I4ODBlOTBiZGEzIiwiSnd0Q2xpZW50U3RvcmVJZCI6IjY0NDQ1NjA0MTYzOTA1MTI2NCIsIkp3dENsaWVudFRlbmFudElkIjoiMSIsIkp3dENsaWVudFBvc0lkIjoiNjQ0NDU2MDUwMjk2MDk0NzIwIiwibmJmIjoxNTczNzIwNzEwLCJleHAiOjE1NzM4MDcxMTAsImlzcyI6IkdyYXNwU2FhcyIsImF1ZCI6IkdyYXNwU2FhcyJ9.rI4PS7viKkLZvKFcQqhuaAAPj21iINurL7kvFAWHJKc","ExpireInSeconds":86400,"Permission":""},"TargetUrl":null,"Success":true,"Error":null,"UnAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:28,083]-[INFO]-[日志信息]:---=正在执行web模块第1条测试用例:删除新增的pos档案----
+[2019-11-14 16:38:28,086]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/ManagePos/Delete，Params：{'Id': 644456050296094720}
+[2019-11-14 16:38:42,273]-[INFO]-[日志信息]:ActualResult：{"result":null,"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
+[2019-11-14 16:38:43,531]-[INFO]-[日志信息]:---=正在执行web模块第2条测试用例:删除新增的店铺信息----
+[2019-11-14 16:38:43,535]-[INFO]-[日志信息]:URL：http://192.168.1.41:11000/api/services/app/BaseStore/Delete，Params：{'Id': 644456041639051264}
+[2019-11-14 16:38:43,836]-[INFO]-[日志信息]:ActualResult：{"result":null,"targetUrl":null,"success":true,"error":null,"unAuthorizedRequest":false,"__abp":true}
